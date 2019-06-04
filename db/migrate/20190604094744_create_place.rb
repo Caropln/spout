@@ -1,4 +1,4 @@
-class CreatePlaces < ActiveRecord::Migration[5.2]
+class CreatePlace < ActiveRecord::Migration[5.2]
   def change
     create_table :places do |t|
       t.string :name
@@ -9,8 +9,6 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       t.string :pictures
       t.integer :lat
       t.integer :long
-
-      t.timestamps
     end
   end
 end
