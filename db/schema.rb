@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_141907) do
+ActiveRecord::Schema.define(version: 2019_06_04_100456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "activity_places", force: :cascade do |t|
+    t.bigint "place_id"
+    t.bigint "activity_id"
+    t.index ["activity_id"], name: "index_activity_places_on_activity_id"
+    t.index ["place_id"], name: "index_activity_places_on_place_id"
+  end
+
+  create_table "favorites_places", force: :cascade do |t|
+    t.bigint "place_id"
+    t.bigint "user_id"
+    t.index ["place_id"], name: "index_favorites_places_on_place_id"
+    t.index ["user_id"], name: "index_favorites_places_on_user_id"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "accessibility"
+    t.string "schedules"
+    t.string "pictures"
+    t.integer "lat"
+    t.integer "long"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "rating"
+    t.bigint "place_id"
+    t.bigint "user_id"
+    t.index ["place_id"], name: "index_reviews_on_place_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +64,10 @@ ActiveRecord::Schema.define(version: 2019_06_03_141907) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "activity_places", "activities"
+  add_foreign_key "activity_places", "places"
+  add_foreign_key "favorites_places", "places"
+  add_foreign_key "favorites_places", "users"
+  add_foreign_key "reviews", "places"
+  add_foreign_key "reviews", "users"
 end
