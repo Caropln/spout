@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'home/index'
   devise_for :users
+  resources :users, only: [:show, :update]
   root to: 'pages#home'
   resources :activities, only: [:index, :show]
   resources :favorites_places, only: [:index]
