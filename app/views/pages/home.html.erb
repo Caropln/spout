@@ -1,5 +1,5 @@
 <section id="footer">
-<a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+<a class="btn btn-primary" style="position: fixed;bottom: 10vh; margin-left: 90%;" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Activities</a>
 <div class="collapse multi-collapse" id="multiCollapseExample1">
   <div class="bar">
 
@@ -58,17 +58,7 @@
 
 </div>
 </section>
-<div
-  id="map"
-  style="width: 100%;
-  height: 100vh;"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-markers="<%= @markers.to_json %>">
-</div>
 
-<div class="container absolute" id="geocoder">
-  <div class="middle-text">
-    <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
 
     <footer>
 
