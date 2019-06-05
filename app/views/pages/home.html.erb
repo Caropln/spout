@@ -1,36 +1,56 @@
 <section id="footer">
-<div class="bar">
+<a class="btn btn-primary" style="position: fixed;bottom: 10vh; margin-left: 90%;" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Activities</a>
+<div class="collapse multi-collapse" id="multiCollapseExample1">
+  <div class="bar">
 
 <div class="cards" >
   <%= check_box_tag :parc, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-image: url(<%= asset_path 'football.png'%>)" for="parc" id="Parc">
-    Breakfast
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'park.png'%>)" for="parc" id="parc">  <p class="activity-title">Parc</p>
   </label>
 
-  <div class="card-category" id="Football">
-    Lunch
-  </div>
 
-  <div class="card-category" id="Volley">
-    Dinner
-  </div>
-  <div class="card-category" id="Petanque">
-    Breakfast
-  </div>
+ <%= check_box_tag :football, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style=" background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'football.png'%>)" for="football" id="football">
+    <p class="activity-title">Foot</p>
+  </label>
 
-  <div class="card-category" id="Skatepark">
-    Lunch
-  </div>
+ <%= check_box_tag :volleyball, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'volleyball.png'%>)" for="volleyball" id="volley">
+    <p class="activity-title">Volleyball</p>
+  </label>
 
-  <div class="card-category" id="PingPong">
-    Dinner
-  </div>
-  <div class="card-category" id="Basket">
-    Breakfast
-  </div>
+ <%= check_box_tag :basket, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'basket.png'%>)" for="basket" id="basket">
+    <p class="activity-title">Basket</p>
+  </label>
 
-  <div class="card-category" id="Fitness">
-    Lunch
+   <%= check_box_tag :pingpong, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'ping-pong.png'%>)" for="pingpong" id="pingpong">
+    <p class="activity-title">Pingpong</p>
+  </label>
+
+     <%= check_box_tag :petanque, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'petanque.png'%>)" for="petanque" id="petanque">
+    <p class="activity-title">Pétanque</p>
+  </label>
+
+     <%= check_box_tag :skatepark, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'skateboard.png'%>)" for="skatepark" id="skatepark">
+    <p class="activity-title">Skatepark</p>
+  </label>
+
+       <%= check_box_tag :fitness, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-position: center;
+    background-size: cover; background-image: url(<%= asset_path 'fitness.png'%>)" for="fitness" id="fitness">
+    <p class="activity-title">Fitness</p>
+  </label>
   </div>
 </div>
 
@@ -38,17 +58,7 @@
 
 </div>
 </section>
-<div
-  id="map"
-  style="width: 100%;
-  height: 100vh;"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-markers="<%= @markers.to_json %>">
-</div>
 
-<div class="container absolute" id="geocoder">
-  <div class="middle-text">
-    <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
 
     <footer>
 
