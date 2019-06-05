@@ -1,4 +1,3 @@
-
 <div
   id="map"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -7,95 +6,75 @@
 <div class="text_homepage">
   <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
   <form>
-    <div class="search-radius">
-    <div class="form-row address_form height-max" id="geocoder">
+    <div class="form-row address_form height-max white-form" id="geocoder">
       <div class="col-7">
         <%= form_tag places_path, method: :get do %>
-        <%= text_field_tag :address, params[:address], class: "form-control perso-form", placeholder: "Enter your address", id: "place_address" %>
+        <%= text_field_tag :address, params[:address], class: "form-control perso-form form-no-border", placeholder: "Enter your address", id: "place_address" %>
       </div>
       <div class="col-3">
-        <select class="form-control" id="sel1" <%= text_field_tag :radius, params[:radius]%>>
+        <select class="form-control form-no-border" id="sel1" <%= text_field_tag :radius, params[:radius]%>>
           <option>+/- 1 km</option>
           <option>+/- 2 km</option>
           <option>+/- 3 km </option>
           <option>+/- 4 km</option>
         </select>
       </div>
-    <div class="col-2">
-      <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-      </button>
+      <div class="col-2">
+        <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+      <section id="footer">
+        <a class="btn btn-primary" style="position: fixed;bottom: 10vh; margin-left: 90%;" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Activities</a>
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="bar">
+            <div class="cards" >
+              <%= check_box_tag :parc, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'park.png'%>)" for="parc" id="parc">  <p class="activity-title">Parc</p>
+              </label>
+              <%= check_box_tag :football, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style=" background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'football.png'%>)" for="football" id="football">
+                <p class="activity-title">Foot</p>
+              </label>
+              <%= check_box_tag :volleyball, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'volleyball.png'%>)" for="volleyball" id="volley">
+                <p class="activity-title">Volleyball</p>
+              </label>
+              <%= check_box_tag :basket, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'basket.png'%>)" for="basket" id="basket">
+                <p class="activity-title">Basket</p>
+              </label>
+              <%= check_box_tag :pingpong, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'ping-pong.png'%>)" for="pingpong" id="pingpong">
+                <p class="activity-title">Pingpong</p>
+              </label>
+              <%= check_box_tag :petanque, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'petanque.png'%>)" for="petanque" id="petanque">
+                <p class="activity-title">Pétanque</p>
+              </label>
+              <%= check_box_tag :skatepark, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'skateboard.png'%>)" for="skatepark" id="skatepark">
+                <p class="activity-title">Skatepark</p>
+              </label>
+              <%= check_box_tag :fitness, nil, false, class: "card-choice hide" %>
+              <label class="card-category" style="background-position: center;
+                background-size: cover; background-image: url(<%= asset_path 'fitness.png'%>)" for="fitness" id="fitness">
+                <p class="activity-title">Fitness</p>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+      </footer>
     </div>
-    </div>
-
-<section id="footer">
-<a class="btn btn-primary" style="position: fixed;bottom: 10vh; margin-left: 90%;" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Activities</a>
-<div class="collapse multi-collapse" id="multiCollapseExample1">
-  <div class="bar">
-
-<div class="cards" >
-  <%= check_box_tag :parc, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'park.png'%>)" for="parc" id="parc">  <p class="activity-title">Parc</p>
-  </label>
-
-
- <%= check_box_tag :football, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style=" background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'football.png'%>)" for="football" id="football">
-    <p class="activity-title">Foot</p>
-  </label>
-
- <%= check_box_tag :volleyball, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'volleyball.png'%>)" for="volleyball" id="volley">
-    <p class="activity-title">Volleyball</p>
-  </label>
-
- <%= check_box_tag :basket, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'basket.png'%>)" for="basket" id="basket">
-    <p class="activity-title">Basket</p>
-  </label>
-
-   <%= check_box_tag :pingpong, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'ping-pong.png'%>)" for="pingpong" id="pingpong">
-    <p class="activity-title">Pingpong</p>
-  </label>
-
-     <%= check_box_tag :petanque, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'petanque.png'%>)" for="petanque" id="petanque">
-    <p class="activity-title">Pétanque</p>
-  </label>
-
-     <%= check_box_tag :skatepark, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'skateboard.png'%>)" for="skatepark" id="skatepark">
-    <p class="activity-title">Skatepark</p>
-  </label>
-
-       <%= check_box_tag :fitness, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-position: center;
-    background-size: cover; background-image: url(<%= asset_path 'fitness.png'%>)" for="fitness" id="fitness">
-    <p class="activity-title">Fitness</p>
-  </label>
-  </div>
+  </form>
+  <% end %>
 </div>
-
-
-
-</div>
-</section>
-
-
-    <footer>
-
-    </footer>
-
-  </div>
-</form>
-<% end %>
-</div>
-
