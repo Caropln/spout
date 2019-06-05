@@ -1,2 +1,58 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<section id="footer">
+<div class="bar">
+
+<div class="cards" >
+  <%= check_box_tag :parc, nil, false, class: "card-choice hide" %>
+  <label class="card-category" style="background-image: url(<%= asset_path 'football.png'%>)" for="parc" id="Parc">
+    Breakfast
+  </label>
+
+  <div class="card-category" id="Football">
+    Lunch
+  </div>
+
+  <div class="card-category" id="Volley">
+    Dinner
+  </div>
+  <div class="card-category" id="Petanque">
+    Breakfast
+  </div>
+
+  <div class="card-category" id="Skatepark">
+    Lunch
+  </div>
+
+  <div class="card-category" id="PingPong">
+    Dinner
+  </div>
+  <div class="card-category" id="Basket">
+    Breakfast
+  </div>
+
+  <div class="card-category" id="Fitness">
+    Lunch
+  </div>
+</div>
+
+
+
+</div>
+</section>
+<div
+  id="map"
+  style="width: 100%;
+  height: 100vh;"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-markers="<%= @markers.to_json %>">
+</div>
+
+<div class="container absolute" id="geocoder">
+  <div class="middle-text">
+    <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
+
+    <footer>
+
+    </footer>
+  </div>
+</div>
+
