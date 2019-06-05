@@ -45,6 +45,7 @@ text-align: center;
   border-radius: 4px;
   background: #605BFF;
   transition: background 0.3s ease;
+  width: 100%;
 }
 
 .btn-flat:hover {
@@ -64,4 +65,24 @@ text-align: center;
 .search-radius {
   background-color: white;
   border-radius: 50px;
+}
+
+.white-form {
+  display: flex;
+  align-items:center;
+  border-radius: 4px;
+  background-color:white;
+}
+
+.form-no-border {
+  border: 0px;
+  &:focus {
+    border-color: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    border-color: none;
+    box-shadow: none;
+  }
 }
