@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_100456) do
+
+ActiveRecord::Schema.define(version: 2019_06_04_145042) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,8 +41,8 @@ ActiveRecord::Schema.define(version: 2019_06_04_100456) do
     t.string "accessibility"
     t.string "schedules"
     t.string "pictures"
-    t.integer "lat"
-    t.integer "long"
+    t.float "longitude"
+    t.float "latitude"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -60,6 +62,13 @@ ActiveRecord::Schema.define(version: 2019_06_04_100456) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
+    t.string "username"
+    t.string "firstname"
+    t.string "lastname"
+    t.string "address"
+    t.string "tel"
+    t.string "birth_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
