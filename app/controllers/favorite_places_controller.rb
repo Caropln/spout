@@ -1,7 +1,11 @@
 class FavoritePlacesController < ApplicationController
-  # def index
-  # end
 
-  # def create
-  # end
+  def index
+    @favorites_places = FavoritePlaces.all
+  end
+
+  def create
+    @favorite_place = FavoritePlaces.new(user: current_user, places: params[:id])
+  end
+
 end
