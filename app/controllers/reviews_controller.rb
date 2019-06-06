@@ -10,12 +10,22 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user = current_user
-    if @review.save
-      redirect_to reviews_path(@place.id)
+    @place = Place.find(params[:place_id])
+    @review.place = @place
+
+    if @review.save!
+      respond_to do |format|
+        format.html { redirect_to place_path(@place) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'places/show' }
+        format.js  # <-- idem
+      end
     end
   end
+
 
   private
 

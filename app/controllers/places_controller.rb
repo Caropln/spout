@@ -22,5 +22,12 @@ class PlacesController < ApplicationController
         infowindow: render_to_string(partial: "infowindow", locals: { place: @place })
       }
     ]
+
+    @review = Review.new
+  end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
   end
 end

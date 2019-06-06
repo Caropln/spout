@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  z-index: 9999;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -49,6 +50,8 @@
 
 .navbar {
   padding-right: 20px;
+  position: fixed;
+  width: 100%;
 }
 
 .nav-item {
@@ -62,8 +65,14 @@ font-size: 25px;
   color: #240240;
   text-decoration: none;
 }
+
+.navbar-push {
+  padding-top: 120px;
+}
 // .header-item {
 //   align-items: center;
 //   display: flex;
 //   flex-wrap: nowrap;
 // }
+
+

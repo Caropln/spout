@@ -14,3 +14,16 @@
   </div>
 </div>
 
+<div id="reviews" style="margin: 0 auto; width: 600px; background: white; ">
+  <%= render 'reviews/form', place: @place, review: @review %>
+
+  <% if @place.reviews.blank? %>
+    Be the first to leave a review for <%= @place.name %>
+  <% else %>
+    <div class="reviews-container">
+    <% @place.reviews.order(created_at: :desc).each do |review| %>
+      <%= render 'reviews/show', review: review %>
+    <% end %>
+    </div>
+  <% end %>
+</div>

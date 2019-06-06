@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :reviews, foreign_key: 'review_id'
+  has_many :reviews, dependent: :destroy
   has_many :favorites_places, foreign_key: 'place_id'
   validates :username, :firstname, :lastname, :address, :tel, :birth_date, presence: true
 
