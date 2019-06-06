@@ -35,8 +35,9 @@ Activities.create!(name: 'Park')
 
 Activities.create!(name: 'Voleyball')
 
-  Places.create! (name: 'Terrains de Volley Ball Tasso' address: 'Stade Henri Tasso 2 Rue Girardin 13007 MARSEILLE' accessibility: 'Arret de bus Corniche Audeoud' schedules: '-' pictures: '' lat: '43.2895544' long: '5.355773')
-  Places.create! (name: 'CERCLE DES NAGEURS DE MARSEILLE Beach volley-ball' address: '7 BD CHARLES LIVON 13007 MARSEILLE' accessibility: 'Arret de bus Pharo Catalans' schedules: '08:00-20:00' pictures: '' lat: '43.2912537' long: '5.3530581')
+  Places.create! (name: 'Terrains Beach Volley Ball' address: 'Plage des Catalans 13007 MARSEILLE' accessibility: 'A 15 minutes à pied du Vieux Port' schedules: '08:30-20:00' pictures: '' lat: '43.2905667' long: '5.3576104')
+  Places.create! (name: 'plage des prophete Beach volley-ball' address: 'Corniche Président John Fitzgerald Kennedy, 13007 Marseille' accessibility: 'Arret de bus Le Prophete' schedules: '24/24' pictures: '' lat: '43.2730287' long: '5.3624088')
+
 
 Activities.create!(name: 'Skatepark')
 
