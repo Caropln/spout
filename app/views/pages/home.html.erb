@@ -1,58 +1,60 @@
-<section id="footer">
-<div class="bar">
-
-<div class="cards" >
-  <%= check_box_tag :parc, nil, false, class: "card-choice hide" %>
-  <label class="card-category" style="background-image: url(<%= asset_path 'football.png'%>)" for="parc" id="Parc">
-    Breakfast
-  </label>
-
-  <div class="card-category" id="Football">
-    Lunch
-  </div>
-
-  <div class="card-category" id="Volley">
-    Dinner
-  </div>
-  <div class="card-category" id="Petanque">
-    Breakfast
-  </div>
-
-  <div class="card-category" id="Skatepark">
-    Lunch
-  </div>
-
-  <div class="card-category" id="PingPong">
-    Dinner
-  </div>
-  <div class="card-category" id="Basket">
-    Breakfast
-  </div>
-
-  <div class="card-category" id="Fitness">
-    Lunch
-  </div>
-</div>
-
-
-
-</div>
-</section>
 <div
   id="map"
-  style="width: 100%;
-  height: 100vh;"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-markers="<%= @markers.to_json %>">
+  data-markers="<%= @markers.to_json %>" class="map_homepage">
 </div>
+<div class="text_homepage">
+  <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
+  <form>
 
-<div class="container absolute" id="geocoder">
-  <div class="middle-text">
-    <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
+    <div class="search-radius">
+      <div class="form-row address_form height-max" id="geocoder">
+        <div class="col-7">
+          <%= form_tag places_path, method: :get do %>
+          <%= text_field_tag :address, params[:address], class: "form-control perso-form", placeholder: "Enter your address", id: "place_address" %>
+        </div>
+        <div class="col-3">
+          <select class="form-control" id="sel1" <%= text_field_tag :radius, params[:radius]%>>
+            <option>+/- 1 km</option>
+            <option>+/- 2 km</option>
+            <option>+/- 3 km </option>
+            <option>+/- 4 km</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <% end %>
+    <div class="form-row address_form height-max white-form" id="geocoder">
+      <div class="col-7">
+        <%= form_tag places_path, method: :get do %>
+        <%= text_field_tag :address, params[:address], class: "form-control perso-form form-no-border", placeholder: "Enter your address", id: "place_address" %>
+      </div>
+      <div class="col-3">
+        <select class="form-control form-no-border" id="sel1" <%= text_field_tag :radius, params[:radius]%>>
+          <option>+/- 1 km</option>
+          <option>+/- 2 km</option>
+          <option>+/- 3 km </option>
+          <option>+/- 4 km</option>
+        </select>
+      </div>
+      <div class="col-2">
+        <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+        </button>
+      </div>
 
-    <footer>
 
-    </footer>
-  </div>
+      <footer>
+      </footer>
+    </div>
+  </form>
+      <%= render "sport"  %>
+  <% end %>
 </div>
 

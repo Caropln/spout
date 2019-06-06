@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :username, :firstname, :lastname, :address, :tel, :birth_date, presence: true
 
   mount_uploader :avatar, PhotoUploader
+
 end
