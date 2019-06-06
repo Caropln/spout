@@ -10,4 +10,14 @@ class PlacesController < ApplicationController
       }
     end
   end
+
+  def show
+    @place = Place.find(params[:id])
+    @review = Review.new
+  end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+  end
 end
