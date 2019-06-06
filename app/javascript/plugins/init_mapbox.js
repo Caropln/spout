@@ -1,13 +1,42 @@
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
+import PinBasket from '../assets/pin-basket.png';
+import PinPetanque from '../assets/pin-petanque.png';
+import PinFootball from '../assets/pin-petanque.png';
+import PinParc from '../assets/pin-park.png';
+import PinVolleyball from '../assets/pin-park.png';
+import PinSkatepark from '../assets/pin-park.png';
+import PinFitness from '../assets/noun_pin_930616.png';
+import PinPingPong from '../assets/pin-ping-pong-.png';
+
+
+const activities = {
+  Basketball: PinBasket,
+  Petanque: PinPetanque,
+  Football: PinFootball,
+  Parc: PinParc,
+  Volleyball: PinVolleyball,
+  Skatepark: PinSkatepark,
+  Fitness: PinFitness,
+  Pingpong: PinPingPong,
+}
+
 const mapElement = document.getElementById('map');
 
 const addMarkers = (map, markers) => {
 markers.forEach((marker) => {
   const popup = new mapboxgl.Popup().setHTML(marker.infowindow); // add this
+  var el = document.createElement('div');
+  el.className = 'marker';
+  el.style.backgroundImage = `url(${activities[marker.activity]})`;
+  el.style.width = '50px';
+  el.style.height = '60px';
+  el.style.backgroundSize = '50px';
 
-  new mapboxgl.Marker()
+  var pin = new mapboxgl.Marker(el);
+
+  pin
     .setLngLat([ marker.lng, marker.lat ])
     .setPopup(popup)
     .addTo(map);
