@@ -6,25 +6,31 @@ h1{
 
 }
 
-.btn{
- justify-content: center;
- border-radius: 40px;
- background-color: gray !important;
- border-style: none;
- color: white;
- display: flex;
+// .btn{
+//  justify-content: center;
+//  border-radius: 40px;
+//  background-color: #5270fc !important;
+//  border-style: black;
+//  color: white;
+//  display: flex;
+//  // height: 50px;
+//  // width: 30px !important;
+//  text-align: center;
 
-
-
-}
+// }
 
 
 
 
 .bouton{
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content:center;
+
 
 }
+
+
 
 .container2{
 // z-index: 2;
@@ -57,7 +63,7 @@ h1{
 
 
 
-p {
+.avis p {
  text-align: center;
  font-size: 10px;
 }
@@ -117,6 +123,8 @@ h4{
 
 .username {
   text-align: center;
+
+
 }
 
 

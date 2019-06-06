@@ -14,9 +14,9 @@
 
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
+.avatar-card {
+  height: 80%;
+  width: 100px !important;
   object-fit: cover;
   border-radius: 100px;
 }
@@ -58,6 +58,17 @@
 .reviews-container {
   max-height: 300px;
   overflow-y: scroll;
+  overflow-x: scroll;
 }
 
+.stars {
+ margin-top: 10px;
+}
 
+h6 {
+  font-size: 8px;
+  margin-top: 10px;
+}
+.username {
+
+}
