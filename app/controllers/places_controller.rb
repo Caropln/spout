@@ -5,6 +5,7 @@ class PlacesController < ApplicationController
       {
         lat: place.latitude,
         lng: place.longitude,
+        activity: place.activities.first&.name,
         infowindow: render_to_string(partial: "infowindow", locals: { place: place })
         # image_url: helpers.asset_url('pin-park.png')
       }
