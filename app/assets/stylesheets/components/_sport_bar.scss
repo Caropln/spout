@@ -1,11 +1,12 @@
 .bar {
-  z-index: 1000;
+  z-index: 1;
   background: linear-gradient(#FFFFFF, #F5F5F5);
   position: fixed;
   bottom: 40px;
   height: 180px;
   width: 80%;
   margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
