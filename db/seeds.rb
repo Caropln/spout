@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -7,6 +8,31 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 activity1 = Activity.create!(name: 'Basketball')
+  User.destroy_all
+
+    Caroline = User.create!(
+  username: "CarolinePlin",
+  firstname: "Caroline",
+  lastname: "Plin",
+  address: "199 rue de rome",
+  tel: "0655694535",
+  birth_date: "1996/05/01",
+  email:"caroline@gmail.com",
+  password:"carolinecaroline",
+  avatar: "https://ressources.phildar.fr/produits/047837/2298/medium/047837_2298_S1.jpg"
+  )
+
+
+Place.destroy_all
+
+Parc = Place.create!(
+name: " Parc 26eme Centenaire",
+address: "23 rue de machin Marseille"
+
+  )
+
+
+ Activity.create!(name: 'Basketball')
 
   place = Place.create!(name: 'Stade Henri TASSO', address: '2 Rue Girardin 13007 MARSEILLE', accessibility: 'Arret de bus Corniche Audeoud', schedules: '08:00-20:00', pictures: '', latitude: '43.2895544', longitude: '5.355773')
   place.activities << activity1
@@ -124,3 +150,9 @@ Activity.create!(name: 'Pingpong')
 
   place = Place.create!(name: 'Pingpong', address: ' MARSEILLE', accessibility: 'accès libre', schedules: '-', pictures: '', latitude: '', longitude: '')
   place.activities << activity8
+  Place.create!(name: 'Pingpong', address: ' MARSEILLE', accessibility: 'accès libre', schedules: '-', pictures: '', latitude: '', longitude: '')
+  Place.create!(name: 'Pingpong', address: ' MARSEILLE', accessibility: 'accès libre', schedules: '-', pictures: '', latitude: '', longitude: '')
+  Place.create!(name: 'Pingpong', address: ' MARSEILLE', accessibility: 'accès libre', schedules: '-', pictures: '', latitude: '', longitude: '')
+  Place.create!(name: 'Pingpong', address: ' MARSEILLE', accessibility: 'accès libre', schedules: '-', pictures: '', latitude: '', longitude: '')
+  Place.create!(name: 'Pingpong', address: ' MARSEILLE', accessibility: 'accès libre', schedules: '-', pictures: '', latitude: '', longitude: '')
+

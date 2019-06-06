@@ -11,4 +11,24 @@ class PlacesController < ApplicationController
       }
     end
   end
+
+  def show
+    @place = Place.find params[:id]
+    @markers = [
+      {
+        icon: "",
+        lat: @place.latitude,
+        lng: @place.longitude,
+        # name: @place.name,
+        infowindow: render_to_string(partial: "infowindow", locals: { place: @place })
+      }
+    ]
+
+    @review = Review.new
+  end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+  end
 end
