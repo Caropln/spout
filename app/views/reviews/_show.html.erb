@@ -1,10 +1,15 @@
 
 <div class="card-product">
-  <img <%= current_user.avatar  %> />
-  <div class="card-product-infos">
-    <h2> <%= current_user.username  %> </h2>
+
+<%= cl_image_tag (current_user.avatar), class: "avatar-card" %>
+
+  <div class="card-product-infos stars">
+    <h1> <%= current_user.username  %> </h1>
+     <h6><%= review.created_at %></h6>
+     <h2><%= "⭐" * (review.rating || 0)  %></h2>
     <p><%= review.content %></p>
-    <h2><%= "⭐" * (review.rating || 0)  %></h2>
+
   </div>
 </div>
+
 

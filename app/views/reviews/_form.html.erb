@@ -1,14 +1,16 @@
-
 <div class="">
   <!--   <div class="container2"> -->
-  <div class="row reviewlayout">
+<!--   <div class="row reviewlayout">
     <div>
-      <%= current_user.avatar %>
+      <%= cl_image_tag (current_user.avatar), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     </div>
     <div class="username">
       <%= current_user.username %>
+
     </div>
-  </div>
+
+  </div> -->
+   <hr>
   <div id="avis-container">
     <div class="avis">
       <h4> Donnez nous votre avis ! </h4>
@@ -19,7 +21,6 @@
       <%= form.input :content, as: :text, label: false %>
     </div>
     <div>
-      <p> Evaluez votre experience </p>
     </div>
     <div class="rate">
       <%= form.radio_button :rating, 5 %>
@@ -34,9 +35,9 @@
       <label for="review_rating_1" title="text">1 stars</label>
     </div>
     <div class="bouton">
-      <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> <%= form.button :submit %> </a>
+     <%= form.button :submit,"Publier", class: "btn btn-flat" %>
       <% end %>
     </div>
-
   </div>
+
 </div>
