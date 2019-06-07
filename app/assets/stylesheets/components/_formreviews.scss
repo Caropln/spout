@@ -1,0 +1,115 @@
+
+.bouton > .btn-flat {
+  color: white;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: #605BFF;
+  transition: background 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.bouton {
+  text-align:center;
+
+}
+
+.review_btn:hover {
+  background: #817DF9;
+  color: white;
+}
+
+
+
+.checked {
+  color: orange;
+}
+
+
+.row{
+  padding-top: 40px;
+}
+
+
+
+.avis p {
+ text-align: center;
+ font-size: 10px;
+}
+.avis h4{
+  font-size: 20px;
+}
+
+
+.rate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+    // height: 46px;
+    // padding: 0 10px;
+    // margin-bottom: 30px;
+    // margin-left: 185px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.contenu {
+  margin-left: 60px;
+  margin-right: 60px;
+  border-radius: 20px;
+}
+
+.username {
+  text-align: center;
+
+
+}
+.reviewlayout {
+
+}
+
+.thanks img {
+  display: flex;
+justify-content: center;
+ height: 80px;
+ margin-bottom: 30px;
+ margin-top: 15px;
+
+}
+
+.commentaire h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
