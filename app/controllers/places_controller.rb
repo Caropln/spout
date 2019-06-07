@@ -5,14 +5,29 @@ class PlacesController < ApplicationController
       {
         lat: place.latitude,
         lng: place.longitude,
-        infowindow: render_to_string(partial: "infowindow", locals: { place: place })
+        activity: place.activities.first&.name,
+        id: place.id,
+        # infowindow: render_to_string(partial: "infowindow", locals: { place: place })
         # image_url: helpers.asset_url('pin-park.png')
       }
     end
   end
 
   def show
-    @place = Place.find(params[:id])
+    @place = Place.find params[:id]
+    @activity = params[:activity] || "Parc"
+    @markers = [
+      {
+        icon: "",
+        lat: @place.latitude,
+        lng: @place.longitude,
+        activity: @place.activities.first&.name,
+        id: @place.id
+        # name: @place.name,
+        # infowindow: render_to_string(partial: "infowindow", locals: { place: @place })
+      }
+    ]
+
     @review = Review.new
   end
 

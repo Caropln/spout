@@ -1,0 +1,60 @@
+.container_show {
+  position:relative;
+}
+
+.show_map {
+  z-index: 1;
+}
+
+.info_place {
+    padding: 15px 15px 15px 15px;
+    border-radius: 20px;
+    margin: 15px 15px 15px 15px;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    height: 574px;
+    top: 0;
+    display: block;
+    width: 330px;
+
+}
+
+
+.header-activity {
+  padding: 10px 10px 10px 10px;
+
+  &__football {
+    background-color: #F73A6A;
+  }
+
+  &__parc {
+    background-color: #B2E917;
+  }
+
+  &__volley {
+    background-color: #FFDF34;
+  }
+
+  &__Basketball {
+    background-color: #F6A854;
+  }
+
+  &__pingpong {
+    background-color: #B163EF;
+  }
+
+  &__petanque {
+    background-color: #73ACF1;
+  }
+
+  &__skatepark {
+    background-color: #605BFF;
+  }
+
+  &__fitness {
+    background: #00E3BC;
+  }
+  }
+
+

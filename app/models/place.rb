@@ -1,4 +1,7 @@
 class Place < ApplicationRecord
+
+  has_many :activity_places, dependent: :destroy
+  has_many :activities, through: :activity_places
   has_many :activity
   has_many :reviews
   geocoded_by :address
