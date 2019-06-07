@@ -7,10 +7,12 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
   <div class="info_place">
-    <h1><%= @place.name %></h1>
+    <h1 class="header-activity__<%= @activity %>">
+      <%=  %>
+      <%= @place.name %></h1>
     <p><%= @place.address %> </p>
     <p><%= @place.accessibility %> </p>
-    <p><%= @place.schedules %> </p>
+    <p> <%= @place.schedules %> </p>
   </div>
 </div>
 

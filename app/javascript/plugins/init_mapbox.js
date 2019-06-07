@@ -26,12 +26,13 @@ const mapElement = document.getElementById('map');
 
 const addMarkers = (map, markers) => {
 markers.forEach((marker) => {
-  const popup = new mapboxgl.Popup().setHTML(marker.infowindow); // add this
-  var el = document.createElement('div');
+  // const popup = new mapboxgl.Popup().setHTML(marker.infowindow); // add this
+  var el = document.createElement('a');
   el.className = 'marker';
   el.style.backgroundImage = `url(${activities[marker.activity]})`;
   el.style.width = '50px';
   el.style.height = '60px';
+  el.href = "/places/" + marker.id + "?activity=" + marker.activity;
   el.style.backgroundSize = '50px';
   el.dataset.activity = marker.activity;
 
@@ -39,8 +40,9 @@ markers.forEach((marker) => {
 
   pin
     .setLngLat([ marker.lng, marker.lat ])
-    .setPopup(popup)
     .addTo(map);
+
+    // .setPopup(popup)
   });
 };
 
