@@ -1,16 +1,3 @@
-
-<div id="map" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>" data-markers="<%= @markers.to_json %>">
-</div>
-
-<ul>
-  <% @places.each do |place| %>
-    <li data-place-id="<%= place.id %>">
-      <%= place.name %>
-      <%= link_to "Delete", place, method: :delete, remote: true %>
-    </li>
-  <% end %>
-</ul>
-
 <div
   id="map"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
