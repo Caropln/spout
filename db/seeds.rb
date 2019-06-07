@@ -10,7 +10,7 @@
 activity1 = Activity.create!(name: 'Basketball')
   User.destroy_all
 
-    Caroline = User.create!(
+caroline = User.create!(
   username: "CarolinePlin",
   firstname: "Caroline",
   lastname: "Plin",
@@ -25,7 +25,7 @@ activity1 = Activity.create!(name: 'Basketball')
 
 Place.destroy_all
 
-Parc = Place.create!(
+parc = Place.create!(
 name: " Parc 26eme Centenaire",
 address: "23 rue de machin Marseille"
 
