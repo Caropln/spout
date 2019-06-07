@@ -28,7 +28,7 @@ const addMarkers = (map, markers) => {
 markers.forEach((marker) => {
   // const popup = new mapboxgl.Popup().setHTML(marker.infowindow); // add this
   var el = document.createElement('a');
-  el.className = 'marker';
+  el.className = 'marker hidden';
   el.style.backgroundImage = `url(${activities[marker.activity]})`;
   el.style.width = '50px';
   el.style.height = '60px';
@@ -66,23 +66,65 @@ const initMapbox = () => { 
 
     fitMapToMarkers(map, markers);
     addMarkers(map, markers);
+
+    if (window.location.pathname == "/places") {
+      map.on("load", clickOnURLActivities);
+    }
     // const geocodou = new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: map });
     // document.getElementById('geocoder').appendChild(geocodou.onAdd(map));
   }
 };
 
+var activitiesChoices = [];
+
 document.querySelectorAll(".card-choice").forEach((checkbox) => {
-  checkbox.addEventListener("click", (e) => {
+  checkbox.addEventListener("change", (e) => {
     var activity = e.target.id;
 
+    var index = activitiesChoices.indexOf(activity);
+
+    if (index === -1) {
+      activitiesChoices.push(activity);
+    } else {
+        activitiesChoices.splice(index, 1);
+    }
+
     document.querySelectorAll(".marker").forEach((marker) => {
-      marker.classList.toggle("hidden");
+      // Si le marker a une catégorie qui est dans le tableau on l'affiche
+      // Sinon on met la classe hidden
+      if (activitiesChoices.includes(marker.dataset.activity)) {
+        marker.classList.remove("hidden");
+      } else {
+        marker.classList.add("hidden");
+      }
+
     });
 
-    document.querySelectorAll("div[data-activity='" + activity + "']").forEach((marker) => {
-      marker.classList.remove("hidden");
-    })
   })
 })
+
+function clickOnURLActivities() {
+  var params = location.search
+  .slice(1)
+  .split('&')
+  .map(p => p.split('='))
+  .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {});
+
+  var foundOne = false;
+
+  for (let [activity, value] of Object.entries(activities)) {
+    if (params[activity]) {
+      $("label[for='" + activity + "']").click();
+      foundOne = true;
+    }
+  }
+
+  if (foundOne == false) {
+    for (let [activity, value] of Object.entries(activities)) {
+      $("label[for='" + activity + "']").click();
+    }
+  }
+
+}
 
 export { initMapbox };
