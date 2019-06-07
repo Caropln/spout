@@ -17,22 +17,52 @@
     top: 0;
     display: block;
     width: 330px;
-
 }
 
+.info_place h1 {
+    font-weight: bold;
+    border-radius: 20px;
+    margin: -15px;
+    padding: 27px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+    font-family: roboto;
+}
+
+#pictureparc {
+  width: 315px;
+}
+
+.icons {
+  padding-right: 5px;
+  font-size: 20px;
+}
+
+#marker_color {
+  color: #B2E917;
+}
+
+#sign_color {
+  color: #605BFF;
+}
+
+#schedules_color {
+  color: #F73A6A;
+}
 
 .header-activity {
   padding: 10px 10px 10px 10px;
 
-  &__football {
+  &__Football {
     background-color: #F73A6A;
   }
 
-  &__parc {
+  &__Parc {
     background-color: #B2E917;
   }
 
-  &__volley {
+  &__Volley {
     background-color: #FFDF34;
   }
 
@@ -40,19 +70,19 @@
     background-color: #F6A854;
   }
 
-  &__pingpong {
+  &__Pingpong {
     background-color: #B163EF;
   }
 
-  &__petanque {
+  &__Petanque {
     background-color: #73ACF1;
   }
 
-  &__skatepark {
+  &__Skatepark {
     background-color: #605BFF;
   }
 
-  &__fitness {
+  &__Fitness {
     background: #00E3BC;
   }
   }

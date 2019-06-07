@@ -8,24 +8,19 @@
   ></div>
   <div class="info_place">
     <h1 class="header-activity__<%= @activity %>">
-      <%=  %>
       <%= @place.name %></h1>
-    <p><%= @place.address %> </p>
-    <p><%= @place.accessibility %> </p>
-    <p> <%= @place.schedules %> </p>
-  </div>
-</div>
-
-<div id="reviews" style="margin: 0 auto; width: 600px; background: white; ">
-  <%= render 'reviews/form', place: @place, review: @review %>
-
-  <% if @place.reviews.blank? %>
-    Be the first to leave a review for <%= @place.name %>
-  <% else %>
-    <div class="reviews-container" id="essais">
-    <% @place.reviews.order(created_at: :desc).each do |review| %>
+      <p style="font-weight: bold"> Photos </p>
+    <%= image_tag "pictureparc.jpeg", id: "pictureparc"%>
+      <p style="font-weight: bold"> Informations pratiques </p>
+    <p><i class="fas fa-map-marker-alt icons" id="marker_color"></i> <%= @place.address %> </p>
+    <p><i class="fas fa-map-signs icons" id="sign_color"></i><%= @place.accessibility %> </p>
+    <p><i class="far fa-clock icons" id="schedules_color"></i> <%= @place.schedules %> </p>
+ <div class="reviews-container">
+  <p style="font-weight: bold"> Reviews </p>
+    <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
       <%= render 'reviews/show', review: review %>
     <% end %>
     </div>
-  <% end %>
 </div>
+
+
