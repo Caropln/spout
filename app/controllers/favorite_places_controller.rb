@@ -1,4 +1,4 @@
-class FavoritesPlacesController < ApplicationController
+class FavoritePlacesController < ApplicationController
   def index
     @favorite_places = FavoritePlace.all
   end
