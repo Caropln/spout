@@ -9,14 +9,16 @@
 .info_place {
     padding: 15px 15px 15px 15px;
     border-radius: 20px;
-    margin: 15px 15px 15px 15px;
+    margin: 15px 15px 30px 15px;
     position: absolute;
     z-index: 2;
     background-color: white;
     height: 574px;
     top: 0;
     display: block;
-    width: 330px;
+    width: 375px;
+    overflow: scroll;
+
 }
 
 .info_place h1 {
@@ -62,7 +64,7 @@
     background-color: #B2E917;
   }
 
-  &__Volley {
+  &__Volleyball {
     background-color: #FFDF34;
   }
 
@@ -87,4 +89,32 @@
   }
   }
 
+.header-activity h1 {
+    font-weight: bold;
+    border-radius: 20px;
+    margin: -15px;
+    padding: 27px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+    font-family: roboto;
+}
+
+#button-plus {
+  color: lightgrey;
+  display: flex;
+  justify-content: right;
+  float: right;
+  margin-top: -40px;
+}
+
+.no-border {
+  border: none;
+}
+
+
+.reviews-index {
+  margin-left: 0px;
+  padding-top: 10px;
+}
 

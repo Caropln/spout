@@ -8,19 +8,48 @@
   ></div>
   <div class="info_place">
     <h1 class="header-activity__<%= @activity %>">
-      <%= @place.name %></h1>
-      <p style="font-weight: bold"> Photos </p>
+    <%= @place.name %></h1>
+    <p style="font-weight: bold"> Photos </p>
     <%= image_tag "pictureparc.jpg", id: "pictureparc"%>
-      <p style="font-weight: bold"> Informations pratiques </p>
+    <p style="font-weight: bold"> Informations pratiques </p>
     <p><i class="fas fa-map-marker-alt icons" id="marker_color"></i> <%= @place.address %> </p>
     <p><i class="fas fa-map-signs icons" id="sign_color"></i><%= @place.accessibility %> </p>
     <p><i class="far fa-clock icons" id="schedules_color"></i> <%= @place.schedules %> </p>
- <div class="reviews-container">
-  <p style="font-weight: bold"> Reviews </p>
-    <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
+    <p style="font-weight: bold"> Avis </p>
+    <div class="reviews-index">
+      <div id="button-plus" >
+        <button type="button" data-toggle="modal" data-target="#modalReviews" class="no-border">
+        Voir plus
+        </button>
+      </div>
+      <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
       <%= render 'reviews/show', review: review %>
-    <% end %>
+      <% end %>
     </div>
+  </div>
+
 </div>
 
-
+<div class="modal fade" id="modalReviews" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" data-dismiss="modal" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div id="reviews" >
+          <%= render 'reviews/form', place: @place, review: @review %>
+          <% if @place.reviews.blank? %>
+          Be the first to leave a review for <%= @place.name %>
+          <% else %>
+          <div class="reviews-container" id="essais">
+            <% @place.reviews.order(created_at: :desc).each do |review| %>
+            <%= render 'reviews/show', review: review %>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

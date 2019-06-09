@@ -2,12 +2,12 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-
+  border-radius: 10px;
   border-width: 2px;
   border-color: black;
   display: flex;
   align-items: center;
-  width: 120%;
+  width: 100%;
   margin-right: 250px;
   // overflow: scroll;
   border-bottom-width: 0.02px;
@@ -19,6 +19,23 @@
 .reviews-container {
   overflow: hidden;
   overflow: scroll;
+}
+
+#modalReviews {
+  margin-top: 5em;
+
+  .modal-body {
+    padding: 1px;
+    overflow: hidden;
+  }
+
+  .close {
+    z-index: 500000;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    top: 0;
+  }
 }
 
 .avatar-card {
@@ -65,12 +82,12 @@
  justify-content: center;
 }
 
-
+#avis-container {
+  margin-top: 40px;
+}
 
 .avis {
   text-align: center;
-  margin-top: 40px;
-
 }
 
 .fond {
@@ -107,6 +124,13 @@ padding-bottom: 30px;
 .stars h1 {
 font-size: 13px;
 font-weight: bold;
+}
+
+#reviews {
+  width: 800px;
+  margin: 0 auto;
+  background: white;
+  position: relative;
 }
 
 
