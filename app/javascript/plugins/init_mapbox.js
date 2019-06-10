@@ -90,8 +90,9 @@ document.querySelectorAll(".card-choice").forEach((checkbox) => {
     if (index === -1) {
       activitiesChoices.push(activity);
     } else {
-        activitiesChoices.splice(index, 1);
+      activitiesChoices.splice(index, 1);
     }
+    sessionStorage.setItem('activitiesChoices', activitiesChoices);
 
     document.querySelectorAll(".marker").forEach((marker) => {
       // Si le marker a une catégorie qui est dans le tableau on l'affiche
@@ -124,9 +125,19 @@ function clickOnURLActivities() {
   }
 
   if (foundOne == false) {
-    for (let [activity, value] of Object.entries(activities)) {
-      $("label[for='" + activity + "']").click();
+    const chosenActivities = sessionStorage.getItem("activitiesChoices").split(",");
+
+    if (chosenActivities.length > 0) {
+      chosenActivities.forEach((activity) => {
+        $("label[for='" + activity + "']").click();
+      });
+    } else {
+      for (let [activity, value] of Object.entries(activities)) {
+        $("label[for='" + activity + "']").click();
+      }
     }
+
+
   }
 
 }

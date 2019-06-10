@@ -44,7 +44,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-
+  direction: rtl;
     // height: 46px;
     // padding: 0 10px;
     // margin-bottom: 30px;
@@ -73,11 +73,11 @@
 .rate:not(:checked) > label:hover ~ label {
     color: #deb217;
 }
+.rate > label:hover ~ input:checked ~ label
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
+.rate > input:checked ~ label:hover ~ label {
     color: #c59b08;
 }
 
