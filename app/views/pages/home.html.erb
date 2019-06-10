@@ -3,6 +3,25 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   data-markers="<%= @markers.to_json %>" class="map_homepage">
 </div>
+<h2 class="sentence">Découvrez les meilleurs spots de
+<span class="fadeIn">
+  <span style="color: #FFDF34">Volley</span>
+  <span style="color: #F73A6A">Football</span>
+  <span style="color: #00E3BC">Fitness</span>
+  <span style="color: #605BFF">Skate</span>
+  <span style="color: #F6A854">Basket</span>
+  <span style="color: #B163EF">PingPong</span>
+  <span style="color: #73ACF1">Petanque</span>
+  <span style="color: #F73A6A">Foot</span>
+  <span style="color: #B2E917">Parc</span>
+</span>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;en extérieur
+</h2>
+<div class="search-bar">
+  <%= form_tag places_path, method: :get do %>
+  <div class="form-row address_form white-form" id="geocoder">
+    <div class="col-7">
+      <%= text_field_tag :address, params[:address], class: "form-control perso-form form-no-border", placeholder: "Enter your address", id: "place_address" %>
 <div class="text_homepage">
   <h1> Découvrez les meilleurs spots de Volley en extérieur </h1>
     <%= form_tag places_path, method: :get do %>
@@ -24,7 +43,35 @@
           </button>
         </div>
       </div>
-    </div>
-  <%= render "sport"  %>
-  <% end %>
+</div>
+<%= render "sport"  %>
+<% end %>
+</div>
+  <h2 id="homepage">Pourquoi utiliser Spout ?</h2>
+<div class="row" id="Topspace">
+  <div class="col-md-4">
+     <div class="col-md-8 white-card">
+      <%= image_tag "effeicacité.svg", class: "img-fluid", id: "effeicacite" %>
+            <h2>Efficacité</h2>
+            <br>
+
+Ne perdez plus de temps à faire des recherches interminables et ennuyeuses
+
+     </div>
+  </div>
+  <div class="col-md-4 ">
+     <div class="col-md-8 white-card">
+<%= image_tag "simplifier.svg", class: "img-fluid illustration2"%>
+      <h2>Simplicité</h2>
+      <br>
+ En un clic, accédez à toutes les informations qu’il vous faut et repérez vous grâce à la map interactive      </div>
+  </div>
+  <div class="col-md-4 ">
+     <div class="col-md-8 white-card">
+      <%= image_tag "explorer.svg", class: "img-fluid illustration"%>
+            <h2>Découverte</h2>
+<br>
+Explorez votre ville et trouvez les meilleurs spots de sport en libre accès
+     </div>
+  </div>
 </div>
