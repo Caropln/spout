@@ -76,18 +76,18 @@ Activity.create!(name: 'Football')
 activity4 = Activity.create!(name: 'Parc')
 Activity.create!(name: 'Parc')
 
-  place = Place.create!(name: 'Parc longchamp', address: 'Boulevard Jardin Zoologique, 13004 - MARSEILLE', accessibility: 'Proximité arrêt de bus Longchamp', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: '', latitude: '43.3048523', longitude: '5.3953988')
+  place = Place.create!(name: 'Parc longchamp', address: 'Boulevard Jardin Zoologique, 13004 - MARSEILLE', accessibility: 'Proximité arrêt de bus Longchamp', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560172678/palais-longchamp_c20mnr.jpg', latitude: '43.3048523', longitude: '5.3953988')
   place.activities << activity4
 
-  place = Place.create!(name: 'Parc du 26e Centenaire', address: 'Avenue de Corinthe, 13010 - MARSEILLE', accessibility: 'Proximité arrêt de bus Parc du 26eme Centenaire', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: '', latitude: '43.2805941', longitude: '5.3927428')
+  place = Place.create!(name: 'Parc du 26e Centenaire', address: 'Avenue de Corinthe, 13010 - MARSEILLE', accessibility: 'Proximité arrêt de bus Parc du 26eme Centenaire', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560172690/parc-26centenaire_bnub2h.jpg', latitude: '43.2805941', longitude: '5.3927428')
   place.activities << activity4
 
-  place = Place.create!(name: 'Parc Borély', address: 'Avenue Borély, 13008 - MARSEILLE', accessibility: 'Proche entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00 - 20:45', pictures: '', latitude: '43.261652', longitude: '5.3800873')
+  place = Place.create!(name: 'Parc Borély', address: 'Avenue Borély, 13008 - MARSEILLE', accessibility: 'Proche entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00 - 20:45', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560175921/Parc-Borely_mtnfi4.jpg', latitude: '43.261652', longitude: '5.3800873')
   place.activities << activity4
 
-  place = Place.create!(name: 'Jardin de la Magalone', address: '245 Boulevard Michelet, 13009 - MARSEILLE', accessibility: 'Proximité arrêt de bus le Corbusier', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: '', latitude: '43.2616023', longitude: '5.3961861')
+  place = Place.create!(name: 'Jardin de la Magalone', address: '245 Boulevard Michelet, 13009 - MARSEILLE', accessibility: 'Proximité arrêt de bus le Corbusier', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560175950/jardinMagalone_jsqcxd.jpg', latitude: '43.2616023', longitude: '5.3961861')
   place.activities << activity4
-  place = Place.create!(name: 'Parc Balnéaire du Prado', address: '108 Allée du Prado Bleu, 13008 - MARSEILLE', accessibility: 'Proximité arrêt de bus Place Amiral Muselier', schedules: 'Accès libre', pictures: '', latitude: '43.2644828', longitude: '5.3701694')
+  place = Place.create!(name: 'Parc Balnéaire du Prado', address: '108 Allée du Prado Bleu, 13008 - MARSEILLE', accessibility: 'Proximité arrêt de bus Place Amiral Muselier', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560172705/ParcBalneairePrado_zgylkg.jpg', latitude: '43.2644828', longitude: '5.3701694')
   place.activities << activity4
 
 activity5 = Activity.create!(name: 'Volleyball')
@@ -102,13 +102,13 @@ Activity.create!(name: 'Volleyball')
 activity6 = Activity.create!(name: 'Skatepark')
 
 Activity.create!(name: 'Skatepark')
-  place = Place.create!(name: 'Skatepark de la Friche', address: '41 Rue Jobin, 13003 - MARSEILLE', accessibility: 'Arret de bus Belle de Mai la Friche', schedules: 'Accès libre', pictures: '', latitude: '43.3100509', longitude: '5.3889157')
+  place = Place.create!(name: 'Skatepark de la Friche', address: '41 Rue Jobin, 13003 - MARSEILLE', accessibility: 'Arret de bus Belle de Mai la Friche', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560171002/SkateParkLAFriche_bjqh8x.png', latitude: '43.3100509', longitude: '5.3889157')
   place.activities << activity6
 
-  place = Place.create!(name: 'Skatepark Le Bowl', address: '197 avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Arret de bus vieille Chapelle à 5 min', schedules: '24/24', pictures: '', latitude: '43.251908', longitude: '5.3724182')
+  place = Place.create!(name: 'Skatepark Le Bowl', address: '197 avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Arret de bus vieille Chapelle à 5 min', schedules: '24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560171026/skateParkLeBowl_zxmkxp.png', latitude: '43.251908', longitude: '5.3724182')
   place.activities << activity6
 
-  place = Place.create!(name: 'Stade Rouvier', address: '16 Avenue de la Barquière, 13009 - MARSEILLE', accessibility: 'Arret de bus Barquière Bartheline', schedules: 'Accès libre', pictures: '', latitude: '43.2452845', longitude: '5.3958586')
+  place = Place.create!(name: 'Stade Rouvier', address: '16 Avenue de la Barquière, 13009 - MARSEILLE', accessibility: 'Arret de bus Barquière Bartheline', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560171045/SkateParkRouvier_jirnhw.png', latitude: '43.2452845', longitude: '5.3958586')
   place.activities << activity6
 
   place = Place.create!(name: 'Parc Athéna', address: 'Rue Albert Einstein, 13013 - MARSEILLE', accessibility: '-', schedules: '-', pictures: '', latitude: '43.3403844', longitude: '5.4456326')
@@ -122,7 +122,7 @@ Activity.create!(name: 'Fitness')
   place = Place.create!(name: 'Street workout park - Parc borely', address: 'Avenue du Prado, 13008 - MARSEILLE', accessibility: 'Situé proche de l entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00-20:45', pictures: '', latitude: '43.261652', longitude: '5.3800873')
   place.activities << activity7
 
-  place = Place.create!(name: 'Calisthenics Park - Plage de David', address: '109 Avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Situé à quelques mètres de la plage', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560158000/StreetWorkoukParkpierreMendes_rskvxn.png', latitude: '43.2603506', longitude: '5.3740163')
+  place = Place.create!(name: 'Calisthenics Park - Plage de David', address: '109 Avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Situé à quelques mètres de la plage', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560174155/StreetWorkoukParkpierreMendes_tcvjqe.png', latitude: '43.2603506', longitude: '5.3740163')
   place.activities << activity7
 
   place = Place.create!(name: 'Fitness Trail - Parc de la colline Saint-Joseph', address: '180 Boulevard Du Redon, 13009 - MARSEILLE', accessibility: 'Proximité arret de bus la Rouvière', schedules: 'Ouvert tous les jours : 08:00-20:00', pictures: '', latitude: '43.2498404', longitude: '5.418973')
