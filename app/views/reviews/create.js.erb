@@ -5,7 +5,9 @@ function refreshForm(innerHTML) {
 
 function addReview(reviewHTML) {
   const reviews = document.getElementById('essais');
+  const cardReviews = document.querySelector('.card-reviews-container');
   reviews.insertAdjacentHTML('afterbegin', reviewHTML);
+  cardReviews.insertAdjacentHTML('afterbegin', reviewHTML);
 }
 
 <% if @review.errors.any? %>

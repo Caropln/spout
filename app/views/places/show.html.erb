@@ -22,9 +22,11 @@
         Voir plus
         </button>
       </div>
-      <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
-      <%= render 'reviews/show', review: review %>
-      <% end %>
+      <div class="card-reviews-container">
+        <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
+          <%= render 'reviews/show', review: review %>
+        <% end %>
+      </div>
     </div>
     <div class="fb-share-button"
     data-href="<%= place_url(@place) %>"
