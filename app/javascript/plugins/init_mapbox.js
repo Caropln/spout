@@ -28,7 +28,11 @@ const addMarkers = (map, markers) => {
 markers.forEach((marker) => {
   // const popup = new mapboxgl.Popup().setHTML(marker.infowindow); // add this
   var el = document.createElement('a');
-  el.className = 'marker hidden';
+  if (marker.show == true) {
+    el.className = 'marker';
+  } else {
+    el.className = 'marker hidden';
+  }
   el.style.backgroundImage = `url(${activities[marker.activity]})`;
   el.style.width = '50px';
   el.style.height = '60px';
@@ -67,7 +71,7 @@ const initMapbox = () => { 
     fitMapToMarkers(map, markers);
     addMarkers(map, markers);
 
-    if (window.location.pathname == "/places") {
+    if (window.location.pathname == "/places" || window.location.pathname == "/places/") {
       map.on("load", clickOnURLActivities);
     }
     // const geocodou = new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: map });
