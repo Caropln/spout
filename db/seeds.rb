@@ -52,14 +52,14 @@ address: "23 rue de machin Marseille"
 activity2 = Activity.create!(name: 'Petanque')
 Activity.create!(name: 'Petanque')
 
-  place = Place.create!(name: 'Pétanque - La Major', address: 'Place de la Major, 13002 - MARSEILLE', accessibility: 'Terrain de pétanque au niveau de la Cathédrale La Major.', schedules: '-', pictures: '', latitude: '43.2988899', longitude: '5.3637314')
+  place = Place.create!(name: 'Pétanque - La Major', address: 'Place de la Major, 13002 - MARSEILLE', accessibility: 'Terrain de pétanque au niveau de la Cathédrale La Major.', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560181588/boulodromelamajor_hfatpz.png', latitude: '43.2988899', longitude: '5.3637314')
   place.activities << activity2
 
 
   place = Place.create!(name: 'Boule Arc de Triomphe', address: '32 rue hoche Quartier St Lazare, 13003 - MARSEILLE', accessibility: 'A 200m de la station de métro Clary.', schedules: 'Accès libre', pictures: '', latitude: '43.3101268', longitude: '5.3738072')
   place.activities << activity2
 
-  place = Place.create!(name: 'Pétanque - Plage des Catalans', address: 'Quartier des Catalans Corniche Kennedy, 13007 - MARSEILLE', accessibility: 'Terrain accessible au niveau de la plage.', schedules: '-', pictures: '', latitude: '43.2900503', longitude: '5.3561055')
+  place = Place.create!(name: 'Pétanque - Plage des Catalans', address: 'Quartier des Catalans Corniche Kennedy, 13007 - MARSEILLE', accessibility: 'Terrain accessible au niveau de la plage.', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560181611/boulodrome-mer_lzczvy.jpg', latitude: '43.2900503', longitude: '5.3561055')
   place.activities << activity2
 
   place = Place.create!(name: 'Pétanque - Parc Émile Duclaux', address: '86 Boulevard Charles Livon, 13007 - MARSEILLE', accessibility: 'Accessible au niveau de l’entrée du park', schedules: 'Ouvert tous les jours : 08:00 - 21:00', pictures: '', latitude: '43.2933509', longitude: '5.3566206')
