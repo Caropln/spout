@@ -94,9 +94,9 @@ activity5 = Activity.create!(name: 'Volleyball')
 
 Activity.create!(name: 'Volleyball')
 
-  place = Place.create!(name: 'Beach Volley Ball des Catalans', address: 'Plage des Catalans 13007 MARSEILLE', accessibility: 'A 15 minutes à pied du Vieux Port', schedules: 'Du lundi au dimanche 08:30-20:00', pictures: '', latitude: '43.2905667', longitude: '5.3576104')
+  place = Place.create!(name: 'Beach Volley Ball des Catalans', address: 'Plage des Catalans 13007 MARSEILLE', accessibility: 'A 15 minutes à pied du Vieux Port', schedules: 'Du lundi au dimanche 08:30-20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560157826/BeachVolleyCatalans_frovyf.png', latitude: '43.2905667', longitude: '5.3576104')
   place.activities << activity5
-  place = Place.create!(name: 'Beach volley-ball plage des prophetes', address: 'Corniche Président John Fitzgerald Kennedy, 13007 Marseille', accessibility: 'Arret de bus Le Prophete', schedules: '24/24', pictures: '', latitude: '43.2730287', longitude: '5.3624088')
+  place = Place.create!(name: 'Beach volley-ball plage des prophetes', address: 'Corniche Président John Fitzgerald Kennedy, 13007 Marseille', accessibility: 'Arret de bus Le Prophete', schedules: '24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560157967/BeachvolleyProphetes_fixsnp.png', latitude: '43.2730287', longitude: '5.3624088')
   place.activities << activity5
 
 activity6 = Activity.create!(name: 'Skatepark')
@@ -122,7 +122,7 @@ Activity.create!(name: 'Fitness')
   place = Place.create!(name: 'street workout park - parc borely', address: 'Avenue du Prado 13008 MARSEILLE', accessibility: 'Proche entrée Prado 2', schedules: '06:00-20:45', pictures: '', latitude: '43.261652', longitude: '5.3800873')
   place.activities << activity7
 
-  place = Place.create!(name: 'Calisthenics Park', address: '109 Avenue Pierre Mendès 13008 MARSEILLE', accessibility: 'Près de la plage', schedules: '24/24', pictures: '', latitude: '43.2603506', longitude: '5.3740163')
+  place = Place.create!(name: 'Calisthenics Park', address: '109 Avenue Pierre Mendès 13008 MARSEILLE', accessibility: 'Près de la plage', schedules: '24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560158000/StreetWorkoukParkpierreMendes_rskvxn.png', latitude: '43.2603506', longitude: '5.3740163')
   place.activities << activity7
 
   place = Place.create!(name: 'Fitness Trail - Parc de la colline Saint-Joseph', address: '180 Boulevard Du Redon 13009 MARSEILLE', accessibility: 'Proximité arret de bus la Rouvière', schedules: '08:00-20:00', pictures: '', latitude: '43.2498404', longitude: '5.418973')
