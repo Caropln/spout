@@ -22,16 +22,16 @@
     <div>
     </div>
     <div class="rate">
-      <%= form.radio_button :rating, 5 %>
-      <label for="review_rating_5" title="text">5 stars</label>
-      <%= form.radio_button :rating, 4 %>
-      <label for="review_rating_4" title="text">4 stars</label>
-      <%= form.radio_button :rating, 3 %>
-      <label for="review_rating_3" title="text">3 stars</label>
-      <%= form.radio_button :rating, 2 %>
-      <label for="review_rating_2" title="text">2 stars</label>
       <%= form.radio_button :rating, 1 %>
       <label for="review_rating_1" title="text">1 stars</label>
+      <%= form.radio_button :rating, 2 %>
+      <label for="review_rating_2" title="text">2 stars</label>
+      <%= form.radio_button :rating, 3 %>
+      <label for="review_rating_3" title="text">3 stars</label>
+      <%= form.radio_button :rating, 4 %>
+      <label for="review_rating_4" title="text">4 stars</label>
+      <%= form.radio_button :rating, 5 %>
+      <label for="review_rating_5" title="text">5 stars</label>
     </div>
     <div class="bouton">
      <%= form.button :submit,"Publier", class: "btn btn-flat" %>

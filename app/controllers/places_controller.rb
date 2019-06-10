@@ -1,6 +1,16 @@
 class PlacesController < ApplicationController
   def index
-    @places = Place.where.not(latitude: nil, longitude: nil)
+    if params[:address]
+      @places = Place.near(params[:address], params[:radius] || 2).where.not(latitude: nil, longitude: nil)
+
+      if @places.empty?
+        @places = Place.where.not(latitude: nil, longitude: nil)
+      end
+
+    else
+      @places = Place.where.not(latitude: nil, longitude: nil)
+    end
+
     @markers = @places.map do |place|
       {
         lat: place.latitude,
@@ -18,7 +28,7 @@ class PlacesController < ApplicationController
     @activity = params[:activity] || "Parc"
     @markers = [
       {
-        icon: "",
+        show: true,
         lat: @place.latitude,
         lng: @place.longitude,
         activity: @place.activities.first&.name,
