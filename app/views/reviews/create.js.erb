@@ -12,5 +12,6 @@ function addReview(reviewHTML) {
   refreshForm('<%= j render "reviews/form", place: @place, review: @review %>');
 <% else %>
   addReview('<%= j render "reviews/show", review: @review %>');
+  document.querySelector('.no-review').remove();
   refreshForm('<%= j render "reviews/showvalidate", place: @place, review: Review.new %>');
 <% end %>
