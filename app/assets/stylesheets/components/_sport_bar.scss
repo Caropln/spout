@@ -5,8 +5,8 @@
   bottom: 40px;
   height: 150px;
   width: 50%;
-  margin-left: 20%;
-  margin-right: 10%;
+  margin-left: 25%;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +46,20 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .bar {
+  z-index: 1;
+  background: linear-gradient(#FFFFFF, #F5F5F5);
+  position: fixed;
+  bottom: 40px;
+  height: 300px;
+  width: 75%;
+  margin-left: 10%;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -53,6 +67,20 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+   .bar {
+  z-index: 1;
+  background: linear-gradient(#FFFFFF, #F5F5F5);
+  position: fixed;
+  bottom: 40px;
+  height: 250px;
+  width: 75%;
+  margin-left: 10%;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 }
 
 // Medium devices (tablets, 768px and up)
@@ -60,6 +88,20 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .bar {
+  z-index: 1;
+  background: linear-gradient(#FFFFFF, #F5F5F5);
+  position: fixed;
+  bottom: 40px;
+  height: 220px;
+  width: 65%;
+  margin-left: 18%;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 }
 
 // Large devices (desktops, 992px and up)
@@ -67,6 +109,25 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
+  .bar {
+  z-index: 1;
+  background: linear-gradient(#FFFFFF, #F5F5F5);
+  position: fixed;
+  bottom: 40px;
+  height: 220px;
+  width: 65%;
+  margin-left: 25%;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -74,6 +135,25 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
+.bar {
+  z-index: 1;
+  background: linear-gradient(#FFFFFF, #F5F5F5);
+  position: fixed;
+  bottom: 40px;
+  height: 150px;
+  width: 65%;
+  margin-left: 20%;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 }
 
 .hidden {
