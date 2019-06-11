@@ -10,17 +10,6 @@
 activity1 = Activity.create!(name: 'Basketball')
   User.destroy_all
 
-resource_type = "image"
-type = "upload"
-version = 1234567890
-public_id = "868491635223265"
-format = "jpg"
-signature = Cloudinary::Utils.api_sign_request({:public_id=>public_id,
-:version=>version}, Cloudinary.config.api_secret)
-photo = "#{resource_type}/#{type}/v#{version}/#{public_id}.#{format}##
-{signature}"
-Course.create!({ photo: photo )}
-
 caroline = User.create!(
   username: "CarolinePlin",
   firstname: "Caroline",
