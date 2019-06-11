@@ -7,10 +7,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-activity1 = Activity.create!(name: 'Basketball')
-FavoritesPlace.destroy_all
 User.destroy_all
 Place.destroy_all
+FavoritesPlace.destroy_all
+
+activity1 = Activity.create!(name: 'Basketball')
 
 caroline = User.create!(
   username: "CarolinePlin",

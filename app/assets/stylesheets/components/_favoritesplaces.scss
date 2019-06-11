@@ -1,6 +1,6 @@
 .info_place_favorite {
     padding: 15px 15px 0px 15px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 15px 15px 30px 15px;
     z-index: 2;
     background-color: white;
@@ -36,6 +36,7 @@
   grid-gap: 0px;
    margin-left: 30px;
    margin-top: 30px;
+   margin-right: 60px;
    // padding-right: 80px;
 }
 
@@ -146,4 +147,14 @@ p span.droite {
 
 .flash-danger {
   border: 2px solid #FD1015;
+}
+
+
+.favorite_title h1 {
+  text-align: center;
+  font-family: roboto;
+ font-size: 40px;
+ color: white;
+ margin-top: 40px;
+ font-weight: bold;
 }
