@@ -23,10 +23,6 @@
         </button>
       </div>
 
-      <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
-      <%= render 'reviews/show', review: review %>
-      <% end %>
-
       <%= simple_form_for [@place, @favorite_place] do |f| %>
         <%= f.submit "add a review", class: "btn btn-primary new-favorite" %>
       <% end %>
@@ -48,7 +44,7 @@
       </div>
     </div>
     <div class="fb-share-button"
-    data-href="<%= place_url(@place) %>"
+    data-href="<%= place_url(@place, activity: @activity) %>"
     data-layout="button_count">
   </div>
   </div>
