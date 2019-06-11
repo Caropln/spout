@@ -1,0 +1,127 @@
+.info_place_favorite {
+    padding: 15px 15px 0px 15px;
+    border-radius: 5px;
+    margin: 15px 15px 30px 15px;
+    z-index: 2;
+    background-color: white;
+    height: 539px;
+    top: 0;
+    display: block;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-left: 50px;
+  }
+
+.info_place_favorite > p  {
+  overflow: hidden;
+  max-height: 1.5em;
+}
+
+
+    .info_place_favorite h1 {
+      color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: -15px;
+    padding: 27px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+    font-family: roboto;
+
+}
+
+  .cards_favorite {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0px;
+   margin-left: 30px;
+   margin-top: 30px;
+   // padding-right: 80px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards_favorite {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards_favorite {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards_favorite {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards_favorite {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards_favorite {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+#pictureparcfavorite {
+  width: 290px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
+.icons_favorite {
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.icons_heart {
+  font-size: 25px;
+  display: flex;
+  position: right !important;
+  text-decoration: none;
+  text-align: right;
+}
+
+.fas fa-heart {
+
+  text-decoration: none;
+}
+
+#heart_color {
+  color: #5270fc;
+  text-decoration: none;
+
+}
+
+#heart_color:hover {
+  color: #efefef ;
+  text-decoration: none;
+
+}
+
+.fb_favorite p {
+  text-align: center;
+}
+p span.center {
+  float: center;
+}
+p span.droite {
+  float: right;
+}
+
+.new-favorite {
+  display: none;
+}
+
