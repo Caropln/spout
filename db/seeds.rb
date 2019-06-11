@@ -8,7 +8,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 activity1 = Activity.create!(name: 'Basketball')
-  User.destroy_all
+FavoritesPlace.destroy_all
+User.destroy_all
+Place.destroy_all
 
 caroline = User.create!(
   username: "CarolinePlin",
@@ -23,7 +25,6 @@ caroline = User.create!(
   )
 
 
-Place.destroy_all
 
 parc = Place.create!(
 name: " Parc 26eme Centenaire",

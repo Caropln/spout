@@ -1,5 +1,9 @@
 body {
   background-color: #dbdbdb;
+  background-image: url('bottom.png');
+  background-position: bottom;
+  background-size: cover;
+
 }
 
 ul{
@@ -83,10 +87,9 @@ text-align: center;
     left: 0;
     margin: auto;
     margin-top: -150px;
-    position: absolute;
     top: 55%;
-    background-color: #ffffff;
-
+    position: relative;
+    top: -250px;
 
 }
 
@@ -115,7 +118,7 @@ text-align: center;
 }
 
 .address_form {
-    position: absolute;
+    position: relative;
     z-index: 3;
     width: 65%;
     text-align:left;
@@ -161,7 +164,8 @@ text-align: center;
   align-items:center;
   border-radius: 4px;
   background-color: white;
-  margin-left: 20%;
+  margin-left: auto;
+  margin-right: auto;
   height: 60px;
 }
 

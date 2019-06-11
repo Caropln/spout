@@ -5,7 +5,7 @@ function initTextswaping ($swap) {
     next = 0;
   }
 
-  $swap.width($($swap.find("li").get(next)).addClass("visible").outerWidth());
+  $swap.width($($swap.find("li").get(next)).addClass("visible").outerWidth() - 30);
   $swap.css({ "transform" : "translateY(-" + next * 3 + "rem)" });
 
   setTimeout(function () { initTextswaping($swap); }, 2000);
