@@ -23,7 +23,7 @@ caroline = User.create!(
   )
 
 teddy = User.create!(
-  username: "TeddyWinner",
+  username: "Teddy",
   firstname: "Teddy",
   lastname: "Winner",
   address: "29 rue du tatami",
