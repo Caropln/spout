@@ -10,6 +10,17 @@
 activity1 = Activity.create!(name: 'Basketball')
   User.destroy_all
 
+resource_type = "image"
+type = "upload"
+version = 1234567890
+public_id = "868491635223265"
+format = "jpg"
+signature = Cloudinary::Utils.api_sign_request({:public_id=>public_id,
+:version=>version}, Cloudinary.config.api_secret)
+photo = "#{resource_type}/#{type}/v#{version}/#{public_id}.#{format}##
+{signature}"
+Course.create!({ photo: photo )}
+
 caroline = User.create!(
   username: "CarolinePlin",
   firstname: "Caroline",
@@ -45,6 +56,44 @@ aymeric = User.create!(
   password:"azerty",
   avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
+ # Course.create!({ photo: open("res.cloudinary.com/...photo.jpg") )}
+
+
+martin = User.create!(
+  username: "Martin",
+  firstname: "Martin",
+  lastname: "Mist",
+  address: "France",
+  tel: "0613443170",
+  birth_date: "1989/04/01",
+  email:"martin@gmail.com",
+  password:"azerty123",
+  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
+  )
+
+alexandre = User.create!(
+  username: "Alex",
+  firstname: "Alexandre",
+  lastname: "Dunemoni",
+  address: "France",
+  tel: "0613442525",
+  birth_date: "1989/04/01",
+  email:"alex@gmail.com",
+  password:"azertyuiop",
+  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
+  )
+
+sophie = User.create!(
+  username: "Sophie",
+  firstname: "Sophie",
+  lastname: "Wagner",
+  address: "France",
+  tel: "0613445151",
+  birth_date: "1986/06/08",
+  email:"sophie@gmail.com",
+  password:"soso123",
+  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
+  )
 
 Place.destroy_all
 
@@ -77,7 +126,7 @@ Activity.create!(name: 'Petanque')
 
   place = Place.create!(name: 'Pétanque - La Major', address: 'Place de la Major, 13002 - MARSEILLE', accessibility: 'Terrain de pétanque au niveau de la Cathédrale La Major.', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560181588/boulodromelamajor_hfatpz.png', latitude: '43.2988899', longitude: '5.3637314')
   place.activities << activity2
-
+  sophie.reviews.create!(content: "Après-midi sympa sur ce spot, je recommande.", rating: 5, place: place)
 
   place = Place.create!(name: 'Boule Arc de Triomphe', address: '32 rue hoche Quartier St Lazare, 13003 - MARSEILLE', accessibility: 'A 200m de la station de métro Clary.', schedules: 'Accès libre', pictures: '', latitude: '43.3101268', longitude: '5.3738072')
   place.activities << activity2
@@ -148,13 +197,21 @@ activity7 = Activity.create!(name: 'Fitness')
 Activity.create!(name: 'Fitness')
   place = Place.create!(name: 'Street workout park - Parc borely', address: 'Avenue du Prado, 13008 - MARSEILLE', accessibility: 'Situé proche de l entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00-20:45', pictures: '', latitude: '43.261652', longitude: '5.3800873')
   place.activities << activity7
+  alexandre.reviews.create!(content: "Parfais pour se remettre en forme seul ou entre amis.", rating: 4, place: place)
+  sophie.reviews.create!(content: "Agréablement surprise, j'y retournerai.", rating: 5, place: place)
+  martin.reviews.create!(content: "Super, le spot dans ce parc est vraiment cool.", rating: 5, place: place)
+  aymeric.reviews.create!(content: "Un de mes spot favoris dans Marseille.", rating: 5, place: place)
+
 
   place = Place.create!(name: 'Calisthenics Park - Plage de David', address: '109 Avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Situé à quelques mètres de la plage', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560174155/StreetWorkoukParkpierreMendes_tcvjqe.png', latitude: '43.2603506', longitude: '5.3740163')
   place.activities << activity7
-  aymeric.reviews.create!(content: "Exellent pour un renfo musculaire au soleil!", rating: 5, place: place)
+  aymeric.reviews.create!(content: "Exellent pour un renfo musculaire au soleil!", rating: 4, place: place)
+  sophie.reviews.create!(content: "Pas très agréable quand il y a du vent.", rating: 1, place: place)
+  martin.reviews.create!(content: "Le spot propose une belle vue, mais pas terrible quand il y a du mistral.", rating: 2, place: place)
 
   place = Place.create!(name: 'Fitness Trail - Parc de la colline Saint-Joseph', address: '180 Boulevard Du Redon, 13009 - MARSEILLE', accessibility: 'Proximité arret de bus la Rouvière', schedules: 'Ouvert tous les jours : 08:00-20:00', pictures: '', latitude: '43.2498404', longitude: '5.418973')
   place.activities << activity7
+
   place = Place.create!(name: 'Outdoor Pull Up Bar', address: '29, Rue Plumier La Joliette, 13002 - MARSEILLE', accessibility: 'Directement sur le trottoir', schedules: '24/24 - Libre accès', pictures: '', latitude: '43.304286', longitude: '5.3679845')
   place.activities << activity7
 
