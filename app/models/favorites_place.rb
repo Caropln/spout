@@ -1,4 +1,4 @@
 class FavoritesPlace < ApplicationRecord
-  belongs_to :place
-  belongs_to :user
+  belongs_to :place, dependent: :destroy
+  belongs_to :user, dependent: :destroy
 end
