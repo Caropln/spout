@@ -14,10 +14,11 @@
     <p><i class="fas fa-map-signs icons_favorite" id="sign_color"></i><%= favoriteplace.place.accessibility %> </p>
     <p><i class="far fa-clock icons_favorite" id="schedules_color"></i> <%= favoriteplace.place.schedules %> </p>
 
-    <%= link_to favorites_place_path(favoriteplace), method: :delete do %>
+    <div>
+       <%= link_to favorites_place_path(favoriteplace), method: :delete do %>
     <p><span class="droite"><i class="fas fa-heart icons_heart" id="heart_color"></i></span></p>
     <% end %>
-    <div>
+
       <p><span class="fb-share-button"
         data-href="<%= favorites_places_url(@place) %>"
       data-layout="button_count"></span></p>
