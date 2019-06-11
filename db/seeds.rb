@@ -116,15 +116,22 @@ Activity.create!(name: 'Petanque')
   place = Place.create!(name: 'Pétanque - La Major', address: 'Place de la Major, 13002 - MARSEILLE', accessibility: 'Terrain de pétanque au niveau de la Cathédrale La Major.', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560181588/boulodromelamajor_hfatpz.png', latitude: '43.2988899', longitude: '5.3637314')
   place.activities << activity2
   sophie.reviews.create!(content: "Après-midi sympa sur ce spot, je recommande.", rating: 5, place: place)
+  alex.reviews.create!(content: "J'aime bien, spot sympa et tranquile.", rating: 4, place: place)
 
-  place = Place.create!(name: 'Boule Arc de Triomphe', address: '32 rue hoche Quartier St Lazare, 13003 - MARSEILLE', accessibility: 'A 200m de la station de métro Clary.', schedules: 'Accès libre', pictures: '', latitude: '43.3101268', longitude: '5.3738072')
+  place = Place.create!(name: 'Boule Arc de Triomphe', address: '32 rue hoche Quartier St Lazare, 13003 - MARSEILLE', accessibility: 'A 200m de la station de métro Clary.', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560267220/petanque_lr9fsd.jpg', latitude: '43.3101268', longitude: '5.3738072')
   place.activities << activity2
+  sophie.reviews.create!(content: "Après-midi sympa sur ce spot, je recommande.", rating: 5, place: place)
+  alex.reviews.create!(content: "J'aime bien, spot sympa et tranquile.", rating: 4, place: place)
 
   place = Place.create!(name: 'Pétanque - Plage des Catalans', address: 'Quartier des Catalans Corniche Kennedy, 13007 - MARSEILLE', accessibility: 'Terrain accessible au niveau de la plage.', schedules: 'Accès libre', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560181611/boulodrome-mer_lzczvy.jpg', latitude: '43.2900503', longitude: '5.3561055')
   place.activities << activity2
+  sophie.reviews.create!(content: "Après-midi sympa sur ce spot, je recommande.", rating: 5, place: place)
+  alex.reviews.create!(content: "J'aime bien, spot sympa et tranquile.", rating: 4, place: place)
 
-  place = Place.create!(name: 'Pétanque - Parc Émile Duclaux', address: '86 Boulevard Charles Livon, 13007 - MARSEILLE', accessibility: 'Accessible au niveau de l’entrée du park', schedules: 'Ouvert tous les jours : 08:00 - 21:00', pictures: '', latitude: '43.2933509', longitude: '5.3566206')
+  place = Place.create!(name: 'Pétanque - Parc Émile Duclaux', address: '86 Boulevard Charles Livon, 13007 - MARSEILLE', accessibility: 'Accessible au niveau de l’entrée du park', schedules: 'Ouvert tous les jours : 08:00 - 21:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560267220/petanque_lr9fsd.jpg', latitude: '43.2933509', longitude: '5.3566206')
   place.activities << activity2
+  sophie.reviews.create!(content: "Après-midi sympa sur ce spot, je recommande.", rating: 5, place: place)
+  alex.reviews.create!(content: "J'aime bien, spot sympa et tranquile.", rating: 4, place: place)
 
 activity3 = Activity.create!(name: 'Football')
 Activity.create!(name: 'Football')
@@ -189,7 +196,7 @@ Activity.create!(name: 'Fitness')
   alexandre.reviews.create!(content: "Parfais pour se remettre en forme seul ou entre amis.", rating: 4, place: place)
   sophie.reviews.create!(content: "Agréablement surprise, j'y retournerai.", rating: 5, place: place)
   martin.reviews.create!(content: "Super, le spot dans ce parc est vraiment cool.", rating: 5, place: place)
-  aymeric.reviews.create!(content: "Un de mes spot favoris dans Marseille.", rating: 5, place: place)
+  aymeric.reviews.create!(content: "Un de mes spots favoris dans Marseille.", rating: 5, place: place)
 
 
   place = Place.create!(name: 'Calisthenics Park - Plage de David', address: '109 Avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Situé à quelques mètres de la plage', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560174155/StreetWorkoukParkpierreMendes_tcvjqe.png', latitude: '43.2603506', longitude: '5.3740163')
