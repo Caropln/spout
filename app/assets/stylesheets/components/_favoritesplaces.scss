@@ -4,7 +4,7 @@
     margin: 15px 15px 30px 15px;
     z-index: 2;
     background-color: white;
-    height: 539px;
+    // height: 539px;
     top: 0;
     display: block;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -18,7 +18,7 @@
 
 
     .info_place_favorite h1 {
-      color: white;
+      color: black;
     font-weight: bold;
     border-radius: 20px;
     margin: -15px;
@@ -77,7 +77,7 @@
 }
 
 #pictureparcfavorite {
-  width: 290px;
+  width: 100%;
   padding-right: 10px;
   padding-bottom: 15px;
 }

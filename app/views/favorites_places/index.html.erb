@@ -1,5 +1,5 @@
 <div class="favorite_title">
-<h1> Tes spots préférés ! 🎉 </h1>
+<h1 style="color: black"> Tes spots préférés ! </h1>
 </div>
 <div class="cards_favorite">
   <% @favorite_places.each do | favoriteplace | %>
@@ -8,7 +8,7 @@
     <%= favoriteplace.place.name %>
     </h1>
     <p style="font-weight: bold"> Photos </p>
-    <%= image_tag "pictureparc.jpg", id: "pictureparcfavorite"%>
+    <%= image_tag favoriteplace.place.pictures, id: "pictureparcfavorite"%>
     <p style="font-weight: bold"> Informations pratiques </p>
     <p style="max-height: 3em !important;"><i class="fas fa-map-marker-alt icons_favorite" id="marker_color"></i> <%= favoriteplace.place.address %> </p>
     <p><i class="fas fa-map-signs icons_favorite" id="sign_color"></i><%= favoriteplace.place.accessibility %> </p>
