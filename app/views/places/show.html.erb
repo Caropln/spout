@@ -8,7 +8,7 @@
   ></div>
   <div class="info_place">
     <h1 class="header-activity__<%= @activity %>">
-    <%= @place.name %></h1>
+     <%= @place.name %></h1>
     <p style="font-weight: bold"> Photos </p>
     <%= image_tag "pictureparc.jpg", id: "pictureparc"%>
     <p style="font-weight: bold"> Informations pratiques </p>
@@ -25,6 +25,13 @@
       <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
       <%= render 'reviews/show', review: review %>
       <% end %>
+
+      <%= simple_form_for [@place, @favorite_place] do |f| %>
+        <%= f.submit "add a review", class: "btn btn-primary new-favorite" %>
+      <% end %>
+      <div>
+      <p><span class="droite"><i class="fas fa-heart icons_heart" id="heart_color"></i></span></p>
+      </div>
     </div>
   </div>
 
@@ -53,3 +60,13 @@
     </div>
   </div>
 </div>
+
+<script>
+  const heart = document.querySelector(".droite");
+
+  const addFavorite = () =>  {
+    const submit = document.querySelector(".new-favorite");
+    submit.click();
+  }
+  heart.addEventListener("click", addFavorite);
+</script>
