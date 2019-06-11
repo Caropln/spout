@@ -222,43 +222,55 @@ text-align: center;
   margin: auto;
 }
 
+#Topspace h2 {
+    font-size: 2rem;
+    margin-top: 35px;
+    font-weight: 600;
+
+}
+
+#Topspace p {
+    font-size: 15px;
+}
+
 #homepage {
   text-align: center;
-  margin-top: 100px;
+  padding-top: 70px;
 
   font-family: 'Montserrat', sans-serif;
 
 font-style: normal;
 font-weight: bold;
-font-size: 50px;
+font-size: 40px;
 line-height: 61px;
 text-align: center;
 }
 
+
 .illustration {
     padding-top: 140px;
     height: 170px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 65px;
     display: block;
     margin: auto;
 }
 
 .illustration2 {
-    padding-top: 20px;
+    padding-top: 30px;
     height: 170px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
     display: block;
     margin: auto;
 }
 
 #effeicacite{
     height: 170px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
     display: block;
     margin: auto;
   }
 
+.homepage_container {
+  background-color: white;
+}
 
