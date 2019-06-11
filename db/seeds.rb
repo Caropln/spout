@@ -35,15 +35,15 @@ teddy = User.create!(
   )
 
 aymeric = User.create!(
-  username: "aymeric",
-  firstname: "aymeric",
+  username: "Aymeric",
+  firstname: "Aymeric",
   lastname: "Hautz",
   address: "jurassic park",
   tel: "0613263170",
   birth_date: "1985/01/01",
   email:"hautz27@gmail.com",
   password:"azerty",
-  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/v1560243997/my_back_aym_zvqchf.jpg"
+  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
 
 Place.destroy_all
