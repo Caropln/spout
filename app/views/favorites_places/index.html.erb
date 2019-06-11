@@ -1,0 +1,27 @@
+<div class="cards_favorite">
+  <% @favorite_places.each do | favoriteplace | %>
+  <div class="info_place_favorite">
+    <h1 class="header-activity__<%= favoriteplace.place.activities.first.name %>">
+    <%= favoriteplace.place.name %>
+    </h1>
+    <p style="font-weight: bold"> Photos </p>
+    <%= image_tag "pictureparc.jpg", id: "pictureparcfavorite"%>
+    <p style="font-weight: bold"> Informations pratiques </p>
+    <p style="max-height: 3em !important;"><i class="fas fa-map-marker-alt icons_favorite" id="marker_color"></i> <%= favoriteplace.place.address %> </p>
+    <p><i class="fas fa-map-signs icons_favorite" id="sign_color"></i><%= favoriteplace.place.accessibility %> </p>
+    <p><i class="far fa-clock icons_favorite" id="schedules_color"></i> <%= favoriteplace.place.schedules %> </p>
+
+    <%= link_to favorites_place_path(favoriteplace), method: :delete do %>
+    <p><span class="droite"><i class="fas fa-heart icons_heart" id="heart_color"></i></span></p>
+    <% end %>
+    <div>
+      <p><span class="fb-share-button"
+        data-href="<%= favorites_places_url(@place) %>"
+      data-layout="button_count"></span></p>
+    </div>
+  </div>
+  <% end %>
+  <!-- <div class="fb_favorite">
+    <p><span class="gauche">partie à gauche</span><span class="droite">partie à droite</span>partie au centre</p>
+  </div> -->
+</div>

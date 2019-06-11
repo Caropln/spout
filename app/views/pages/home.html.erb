@@ -24,10 +24,11 @@
     </div>
     <div class="col-3">
       <select class="form-control form-no-border" id="sel1" <%= text_field_tag :radius, params[:radius]%>>
-        <option>+/- 1 km</option>
-        <option>+/- 2 km</option>
-        <option>+/- 3 km </option>
-        <option>+/- 4 km</option>
+            <option value="1">+/- 1 km</option>
+            <option value="2">+/- 2 km</option>
+            <option value="3">+/- 3 km </option>
+            <option value="4">+/- 4 km</option>
+            <option value="5">+/- 5 km</option>
       </select>
     </div>
     <div class="col-2" id='heightmax'>
@@ -39,6 +40,7 @@
 </div>
 <%= render "sport"  %>
 <% end %>
+<div class="homepage_container">
 <h2 id="homepage">Pourquoi utiliser Spout ?</h2>
 <div class="row" id="Topspace">
   <div class="col-md-4">
@@ -46,7 +48,7 @@
       <%= image_tag "effeicacité.svg", class: "img-fluid", id: "effeicacite" %>
       <h2>Efficacité</h2>
       <br>
-      Ne perdez plus de temps à faire des recherches interminables et ennuyeuses
+      <p> Ne perdez plus de temps à faire des recherches interminables et ennuyeuses</p>
     </div>
   </div>
   <div class="col-md-4 ">
@@ -54,14 +56,15 @@
       <%= image_tag "simplifier.svg", class: "img-fluid illustration2"%>
       <h2>Simplicité</h2>
       <br>
-    En un clic, accédez à toutes les informations qu’il vous faut et repérez vous grâce à la map interactive      </div>
+    <p> En un clic, accédez à toutes les informations qu’il vous faut et repérez vous grâce à la map interactive </p>      </div>
   </div>
   <div class="col-md-4 ">
     <div class="col-md-8 white-card">
       <%= image_tag "explorer.svg", class: "img-fluid illustration"%>
       <h2>Découverte</h2>
       <br>
-      Explorez votre ville et trouvez les meilleurs spots de sport en libre accès
+      <p> Explorez votre ville et trouvez les meilleurs spots de sport en libre accès </p>
     </div>
   </div>
+</div>
 </div>
