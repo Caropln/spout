@@ -22,6 +22,29 @@ caroline = User.create!(
   avatar: "https://ressources.phildar.fr/produits/047837/2298/medium/047837_2298_S1.jpg"
   )
 
+teddy = User.create!(
+  username: "TeddyWinner",
+  firstname: "Teddy",
+  lastname: "Winner",
+  address: "29 rue du tatami",
+  tel: "0655694535",
+  birth_date: "1987/02/03",
+  email:"Teddy@gmail.com",
+  password:"hajime",
+  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/v1560242742/teddyrinner_spav6e.jpg"
+  )
+
+aymeric = User.create!(
+  username: "aymeric",
+  firstname: "aymeric",
+  lastname: "Hautz",
+  address: "jurassic park",
+  tel: "0613263170",
+  birth_date: "1985/01/01",
+  email:"hautz27@gmail.com",
+  password:"azerty",
+  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/v1560243997/my_back_aym_zvqchf.jpg"
+  )
 
 Place.destroy_all
 
@@ -96,8 +119,12 @@ Activity.create!(name: 'Volleyball')
 
   place = Place.create!(name: 'Beach Volley-Ball - Plage des Catalans', address: 'Plage des Catalans, 13007 - MARSEILLE', accessibility: 'A 15 minutes à pied du Vieux Port', schedules: 'Ouvert tous les jours : 08:30-20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560157826/BeachVolleyCatalans_frovyf.png', latitude: '43.2905667', longitude: '5.3576104')
   place.activities << activity5
+  teddy.reviews.create!(content: "Très joli site, propre et agréable, je le recommande vivement!!!", rating: 5, place: place)
+  aymeric.reviews.create!(content: "Parfait pour s'amuser entre amis.", rating: 5, place: place)
+
   place = Place.create!(name: 'Beach Volley-Ball - Plage des Prophètes', address: 'Corniche, Président John Fitzgerald Kennedy, 13007 - Marseille', accessibility: 'Proximité arrêt de bus - Le Prophete', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560157967/BeachvolleyProphetes_fixsnp.png', latitude: '43.2730287', longitude: '5.3624088')
   place.activities << activity5
+  teddy.reviews.create!(content: "Sympa, j'aime bien la vue pendant un match entre potes.", rating: 4, place: place)
 
 activity6 = Activity.create!(name: 'Skatepark')
 
@@ -124,6 +151,7 @@ Activity.create!(name: 'Fitness')
 
   place = Place.create!(name: 'Calisthenics Park - Plage de David', address: '109 Avenue Pierre Mendès, 13008 - MARSEILLE', accessibility: 'Situé à quelques mètres de la plage', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560174155/StreetWorkoukParkpierreMendes_tcvjqe.png', latitude: '43.2603506', longitude: '5.3740163')
   place.activities << activity7
+  aymeric.reviews.create!(content: "Exellent pour un renfo musculaire au soleil!", rating: 5, place: place)
 
   place = Place.create!(name: 'Fitness Trail - Parc de la colline Saint-Joseph', address: '180 Boulevard Du Redon, 13009 - MARSEILLE', accessibility: 'Proximité arret de bus la Rouvière', schedules: 'Ouvert tous les jours : 08:00-20:00', pictures: '', latitude: '43.2498404', longitude: '5.418973')
   place.activities << activity7
