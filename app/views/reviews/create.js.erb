@@ -5,12 +5,15 @@ function refreshForm(innerHTML) {
 
 function addReview(reviewHTML) {
   const reviews = document.getElementById('essais');
+  const cardReviews = document.querySelector('.card-reviews-container');
   reviews.insertAdjacentHTML('afterbegin', reviewHTML);
+  cardReviews.insertAdjacentHTML('afterbegin', reviewHTML);
 }
 
 <% if @review.errors.any? %>
   refreshForm('<%= j render "reviews/form", place: @place, review: @review %>');
 <% else %>
   addReview('<%= j render "reviews/show", review: @review %>');
+  document.querySelector('.no-review').remove();
   refreshForm('<%= j render "reviews/showvalidate", place: @place, review: Review.new %>');
 <% end %>
