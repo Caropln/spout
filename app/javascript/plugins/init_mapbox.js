@@ -1,14 +1,14 @@
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
-import PinBasket from '../assets/pin-basketball.png';
+import PinBasket from '../assets/Basket-pin.png';
 import PinPetanque from '../assets/pin-petanque.png';
-import PinFootball from '../assets/pin-foootball.png';
+import PinFootball from '../assets/football-pin.png';
 import PinParc from '../assets/pin-parc.png';
 import PinVolleyball from '../assets/volleyball-pin.png';
 import PinSkatepark from '../assets/pin-skateboard.png';
-import PinFitness from '../assets/pin-fitness.png';
-import PinPingPong from '../assets/pin-ping-pong.png';
+import PinFitness from '../assets/fitness-pin.png';
+import PinPingPong from '../assets/pin-pingpong.png';
 
 
 const activities = {

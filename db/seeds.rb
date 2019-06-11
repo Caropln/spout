@@ -8,7 +8,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 activity1 = Activity.create!(name: 'Basketball')
-  User.destroy_all
+FavoritesPlace.destroy_all
+User.destroy_all
+Place.destroy_all
 
 caroline = User.create!(
   username: "CarolinePlin",
@@ -23,7 +25,7 @@ caroline = User.create!(
   )
 
 teddy = User.create!(
-  username: "TeddyWinner",
+  username: "Teddy",
   firstname: "Teddy",
   lastname: "Winner",
   address: "29 rue du tatami",
@@ -84,7 +86,6 @@ sophie = User.create!(
   avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
 
-Place.destroy_all
 
 parc = Place.create!(
 name: " Parc 26eme Centenaire",

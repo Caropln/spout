@@ -1,12 +1,12 @@
 .bar {
   z-index: 1;
   background: linear-gradient(#FFFFFF, #F5F5F5);
-  position: absolute;
-
+  position: relative;
+  top: -80px;
   height: 150px;
   width: 50%;
   margin-top: 50px;
-  margin-left: 22%;
+  margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
@@ -22,6 +22,10 @@
   width: 75px;
   height: 75px;
   border-radius: 20px;
+}
+
+.places-index .bar {
+  top: -290px;
 }
 
 
@@ -72,7 +76,8 @@
    .bar {
   z-index: 1;
   background: linear-gradient(#FFFFFF, #F5F5F5);
-  position: absolute;
+     position: relative;
+    top: -80px;
   height: 250px;
   width: 75%;
   margin-left: 10%;
@@ -115,7 +120,7 @@
   bottom: 40px;
   height: 220px;
   width: 65%;
-  margin-left: 25%;
+  margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
