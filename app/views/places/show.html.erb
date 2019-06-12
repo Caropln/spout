@@ -65,7 +65,7 @@
 
           <div class="reviews-container" id="essais">
             <% if @place.reviews.blank? %>
-              <span class="no-review">Soyez le premier à laisser un avis sur <%= @place.name %></span>
+              <p>Soyez le premier à laisser un avis sur <%= @place.name %></p>
             <% else %>
               <% @place.reviews.order(created_at: :desc).each do |review| %>
                <%= render 'reviews/show', review: review %>
