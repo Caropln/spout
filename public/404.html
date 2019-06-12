@@ -1,67 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
+  <head>
+    <title>The page you were looking for doesn't exist (404)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+    #can {
+    width: 800px;
+    height: 600px;
+    }
+    body, html {
     margin: 0;
-  }
+    padding: 0;
+    }
+    * {
+  box-sizing: border-box;
+}
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+/* Create two equal columns that floats next to each other */
+.column1 {
+  margin-top: 5%;
+  margin-left: 5%;
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 100vh; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 55%;
+  padding: 10px;
+  height: 100vh; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+.space {
+  margin-top: 100px;
+}
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+.font {
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 61px;
+}
+
+.font2 {
+
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 25px;
+}
+
+.btn {
+  background-color: #605BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  margin-top: 25px;
+}
+
+.btn:hover {opacity: 1}
+
+
+    </style>
+  </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <div class="row">
+    <div class="column1">
+      <a href="https://www.spout.eu">
+      <img border="0" alt="spout" src="https://github.com/Caropln/spout/blob/master/app/assets/images/Spout1.png?raw=true" width="45%"></a>
+       <h1 class="font space"> Cette page n'existe pas </h1>
+      <p class="font2"> La page que vous recherchez semble introuvable. Sans d&eacute;tour, il n'est point de voyage... Retournez &agrave; la page d'accueil.  </p>      <br>
+      <a href="https://www.spout.eu"><button class="btn font2">Retourner a l'accueil</button></a>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <div class="column2">
+      <center>
+      <br>
+      <canvas width="1200" height="900" id="can"></canvas>
+      <br>
+
+      </center>
+    </div>
   </div>
-</body>
-</html>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/isomer/0.2.6/isomer.js"></script>
+      <script>
+      var Shape = Isomer.Shape;
+      var Point = Isomer.Point;
+      var Color = Isomer.Color;
+      canvas = document.getElementById("can")
+      var iso = new Isomer(canvas);
+      ctx = canvas.getContext("2d")
+      var points = [
+      [0,4,3],[0,6,4],[0,5,4],[0,4,4],[0,4,5],[0,6,5],
+      [0,1,3],[0,0,3],[0,-1,3],[0,1,4],[0,-1,4],
+      [0,1,5],[0,0,5],[0,-1,5],
+      [0,-6,3],[0,-4,4],[0,-5,4],[0,-6,4],[0,-6,5],[0,-4,5]
+      ]
+      var cubes = []
+      setInterval(function () {
+      ctx.clearRect(0,0,canvas.width, canvas.height)
+      for (i=0; i<cubes.length; i++) {
+      color = [Math.floor(Math.random()*150),Math.floor(Math.random()*53),Math.floor(Math.random()*110)+75]
+      iso.add(Shape.Prism(new Point(points[i][0], points[i][1], points[i][2])), new Color(color[0],color[5],color[2]))
+      }
+      cubes.push(points.splice(0,0)[0])
+      }, 120)
+      </script>
+    </body>
+  </html>
