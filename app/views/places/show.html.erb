@@ -12,7 +12,7 @@
      <span aria-hidden="true">&times; </span>
      <% end %>
    </div>
-    <h1 class="header-activity__<%= @activity %>">
+    <h1 class="title-place header-activity__<%= @activity %>">
      <%= @place.name %>
      </h1>
     <p style="font-weight: bold"> Photos </p>
@@ -41,7 +41,15 @@
         <%= f.submit "add a review", class: "btn btn-primary new-favorite" %>
       <% end %>
       <div>
-      <p><span class="droite"><i class="fas fa-heart icons_heart" id="heart_color"></i></span></p>
+      <p><span class="droite">
+        <% if current_user.places.where(id: @place.id).any? %>
+          <i class="fas fa-heart icons_heart" id="heart_color"></i>
+        <% else %>
+          <%= link_to @favorite_place, method: :destroy do %>
+            <i class="far fa-heart icons_heart" id=""></i>
+          <% end %>
+        <% end %>
+      </span></p>
 
       <div class="flash flash-success alert alert-dismissible fade show" role="alert">
   <span><strong>Yay!</strong> 🎉 Votre spot a bien été ajouté !</span>

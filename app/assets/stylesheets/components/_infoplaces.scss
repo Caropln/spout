@@ -21,7 +21,14 @@
     box-shadow: -2px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.info_place h1 {
+.review_title {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: roboto;
+    padding-top: 30px;
+}
+
+.title-place {
     font-weight: bold;
     border-top-left-radius: 20px;
     margin: -15px;

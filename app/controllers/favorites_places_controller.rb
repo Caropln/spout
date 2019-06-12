@@ -11,7 +11,7 @@ class FavoritesPlacesController < ApplicationController
   def destroy
     @favorite = FavoritesPlace.find(params[:id])
     @favorite.destroy
-    redirect_to "/favorites_places"
+    redirect_to :back
   end
 
 end
