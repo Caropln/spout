@@ -39,6 +39,7 @@ class PlacesController < ApplicationController
     ]
 
     @review = Review.new
+
     @favorite_place = FavoritesPlace.new
   end
 

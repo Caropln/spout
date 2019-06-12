@@ -4,7 +4,7 @@
 <%= cl_image_tag review.user.avatar, gravity: :face, width: 60, height: 60, crop: :fill,  class: "avatar-card" %>
 
   <div class="card-product-infos stars">
-    <h1> <%= review.user.username  %> </h1>
+    <h1 class="review_title"> <%= review.user.username  %> </h1>
      <h6><%= review.created_at %></h6>
      <h2><%= "⭐" * (review.rating || 0)  %></h2>
     <p><%= review.content %></p>
