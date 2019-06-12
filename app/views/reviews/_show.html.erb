@@ -1,7 +1,7 @@
 
 <div class="card-product">
 
-<%= cl_image_tag (review.user.avatar), class: "avatar-card" %>
+<%= cl_image_tag review.user.avatar, gravity: :face, width: 60, height: 60, crop: :fill,  class: "avatar-card" %>
 
   <div class="card-product-infos stars">
     <h1> <%= review.user.username  %> </h1>
