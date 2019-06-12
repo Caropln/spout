@@ -125,13 +125,15 @@ function clickOnURLActivities() {
   }
 
   if (foundOne == false) {
+    sessionStorage.setItem("activitiesChoices", sessionStorage.getItem("activitiesChoices") || []);
     const chosenActivities = sessionStorage.getItem("activitiesChoices").split(",");
 
-    if (chosenActivities.length > 0) {
+    if (sessionStorage.getItem("activitiesChoices").length > 0) {
       chosenActivities.forEach((activity) => {
         $("label[for='" + activity + "']").click();
       });
     } else {
+
       for (let [activity, value] of Object.entries(activities)) {
         $("label[for='" + activity + "']").click();
       }
