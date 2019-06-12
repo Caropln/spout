@@ -21,9 +21,11 @@ caroline = User.create!(
   tel: "0655694535",
   birth_date: "1996/05/01",
   email:"caroline@gmail.com",
-  password:"carolinecaroline",
-  avatar: "https://ressources.phildar.fr/produits/047837/2298/medium/047837_2298_S1.jpg"
-  )
+  password:"carolinecaroline"
+)
+
+caroline.remote_avatar_url = "https://ressources.phildar.fr/produits/047837/2298/medium/047837_2298_S1.jpg"
+caroline.save
 
 teddy = User.create!(
   username: "Teddy",
@@ -34,8 +36,10 @@ teddy = User.create!(
   birth_date: "1987/02/03",
   email:"Teddy@gmail.com",
   password:"hajime",
-  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/v1560242742/teddyrinner_spav6e.jpg"
   )
+
+teddy.remote_avatar_url = "https://res.cloudinary.com/deqh1paih/image/upload/v1560352685/teddy_kysqtm.jpg"
+teddy.save
 
 aymeric = User.create!(
   username: "Aymeric",
@@ -46,10 +50,9 @@ aymeric = User.create!(
   birth_date: "1985/01/01",
   email:"hautz27@gmail.com",
   password:"azerty",
-  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
- # Course.create!({ photo: open("res.cloudinary.com/...photo.jpg") )}
-
+aymeric.remote_avatar_url = "https://res.cloudinary.com/deqh1paih/image/upload/v1560352750/my_back_aym_ntn9sd.jpg"
+aymeric.save
 
 martin = User.create!(
   username: "Martin",
@@ -60,8 +63,10 @@ martin = User.create!(
   birth_date: "1989/04/01",
   email:"martin@gmail.com",
   password:"azerty123",
-  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
+
+martin.remote_avatar_url = "https://res.cloudinary.com/deqh1paih/image/upload/v1560352734/martin_xzp2u1.jpg"
+martin.save
 
 alexandre = User.create!(
   username: "Alex",
@@ -72,8 +77,10 @@ alexandre = User.create!(
   birth_date: "1989/04/01",
   email:"alex@gmail.com",
   password:"azertyuiop",
-  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
+
+alexandre.remote_avatar_url = "https://res.cloudinary.com/deqh1paih/image/upload/v1560352718/alex_ot6uds.jpg"
+alexandre.save
 
 sophie = User.create!(
   username: "Sophie",
@@ -84,8 +91,10 @@ sophie = User.create!(
   birth_date: "1986/06/08",
   email:"sophie@gmail.com",
   password:"soso123",
-  avatar: "https://res.cloudinary.com/deqh1paih/image/upload/c_scale,w_110/v1560243997/my_back_aym_zvqchf.jpg"
   )
+
+sophie.remote_avatar_url = "https://res.cloudinary.com/deqh1paih/image/upload/v1560352761/sophie_di2lqc.jpg"
+sophie.save
 
 
 parc = Place.create!(

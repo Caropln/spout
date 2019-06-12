@@ -4,15 +4,27 @@
 <div class="cards_favorite">
   <% @favorite_places.each do | favoriteplace | %>
   <div class="info_place_favorite">
+    <%= link_to place_path(favoriteplace.place, activity: "#{favoriteplace.place.activities.first.name}"), class: "text-decoration-none" do   %>
     <h1 class="header-activity__<%= favoriteplace.place.activities.first.name %>">
+
     <%= favoriteplace.place.name %>
     </h1>
+    <% end %>
     <p style="font-weight: bold"> Photos </p>
-    <%= image_tag favoriteplace.place.pictures, id: "pictureparcfavorite"%>
+    <%= cl_image_tag favoriteplace.place.pictures, crop: :fill, class: "pictureparcfavorite"%>
     <p style="font-weight: bold"> Informations pratiques </p>
-    <p style="max-height: 3em !important;"><i class="fas fa-map-marker-alt icons_favorite" id="marker_color"></i> <%= favoriteplace.place.address %> </p>
-    <p><i class="fas fa-map-signs icons_favorite" id="sign_color"></i><%= favoriteplace.place.accessibility %> </p>
-    <p><i class="far fa-clock icons_favorite" id="schedules_color"></i> <%= favoriteplace.place.schedules %> </p>
+    <div class="d-flex" style="max-height: 3em !important;">
+      <i class="fas fa-map-marker-alt icons_favorite" id="marker_color"></i> <p>
+      <%= favoriteplace.place.address %></p>
+    </div>
+    <div class="d-flex">
+      <i class="fas fa-map-signs icons_favorite" id="sign_color"></i> <p>
+      <%= favoriteplace.place.accessibility %></p>
+    </div>
+    <div class="d-flex">
+  <i class="far fa-clock icons_favorite" id="schedules_color"></i> <p> <%= favoriteplace.place.schedules %></p>
+  </div>
+
 
     <div>
        <%= link_to favorites_place_path(favoriteplace), method: :delete do %>
