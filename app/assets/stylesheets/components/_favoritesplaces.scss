@@ -4,7 +4,7 @@
     margin: 15px 15px 30px 15px;
     z-index: 2;
     background-color: white;
-    height: 539px;
+    // height: 539px;
     top: 0;
     display: block;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -20,13 +20,14 @@
     .info_place_favorite h1 {
       color: black;
     font-weight: bold;
-    border-radius: 20px;
     margin: -15px;
     padding: 27px;
     margin-bottom: 15px;
     font-size: 24px;
     text-align: center;
     font-family: roboto;
+     border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
 
 }
@@ -38,6 +39,8 @@
    margin-left: 30px;
    margin-top: 30px;
    // padding-right: 80px;
+   margin-right: 50px;
+
 }
 
 // Smallest device
@@ -126,3 +129,9 @@ p span.droite {
   display: none;
 }
 
+.favorite_title h1 {
+  text-align: center;
+  font-family: roboto;
+  font-size: 40px;
+  padding-top: 30px;
+}
