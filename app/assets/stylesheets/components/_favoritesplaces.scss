@@ -1,5 +1,5 @@
 .info_place_favorite {
-    padding: 15px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
     border-radius: 5px;
     margin: 15px 15px 30px 15px;
     z-index: 2;
@@ -9,23 +9,32 @@
     display: block;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin-left: 50px;
+     border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+
   }
 
+  .text-decoration-none {
+    text-decoration: none;
+  }
 .info_place_favorite > p  {
   overflow: hidden;
   max-height: 1.5em;
+  margin-left: 10px;
+  font-size: 14px;
+   font-family: 'Montserrat', sans-serif;
 }
 
 
     .info_place_favorite h1 {
-      color: black;
+      color: white;
     font-weight: bold;
     margin: -15px;
     padding: 27px;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
-    font-family: roboto;
+    font-family: 'Montserrat', sans-serif;
      border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
@@ -35,11 +44,11 @@
   .cards_favorite {
   display: grid;
   // grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0px;
-   margin-left: 30px;
-   margin-top: 30px;
+  grid-gap: 44px;
+   margin: 30px 150px 40px 40px;
    // padding-right: 80px;
-   margin-right: 50px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
 
 }
 
@@ -79,10 +88,14 @@
 
 }
 
-#pictureparcfavorite {
+.pictureparcfavorite {
+  margin-bottom: 15px;
+  height: 130px;
+  background-image: cover !important;
+  object-fit: cover !important;
   width: 100%;
-  padding-right: 10px;
-  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .icons_favorite {
@@ -131,7 +144,22 @@ p span.droite {
 
 .favorite_title h1 {
   text-align: center;
-  font-family: roboto;
-  font-size: 40px;
-  padding-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding-top: 40px;
+  margin-bottom: 50px;
 }
+
+// .container_picture {
+//   width: 300px;
+//   height: 280px;
+//   background-image: cover;
+//   object-fit: cover;
+
+// }
+
+.d-flex p {
+  font-size : 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
