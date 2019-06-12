@@ -7,11 +7,17 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
   <div class="info_place">
+    <div>
+    <%= link_to places_path, class: "close", id: "close-info" do %>
+     <span aria-hidden="true">&times; </span>
+     <% end %>
+   </div>
     <h1 class="header-activity__<%= @activity %>">
-     <%= @place.name %></h1>
+     <%= @place.name %>
+     </h1>
     <p style="font-weight: bold"> Photos </p>
-    <%= cl_image_tag @place.pictures, class: "img-fluid" %>
-    <p style="font-weight: bold"> Informations pratiques </p>
+    <%= cl_image_tag @place.pictures, class: "img-fluid", id: "picturesinfo" %>
+    <p style="font-weight: bold" id="info-pratique"> Informations pratiques </p>
     <p><i class="fas fa-map-marker-alt icons" id="marker_color"></i> <%= @place.address %> </p>
     <p><i class="fas fa-map-signs icons" id="sign_color"></i><%= @place.accessibility %> </p>
     <p><i class="far fa-clock icons" id="schedules_color"></i> <%= @place.schedules %> </p>
@@ -22,8 +28,6 @@
         Voir plus
         </button>
       </div>
-
-
 
       <div class="card-reviews-container">
         <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>

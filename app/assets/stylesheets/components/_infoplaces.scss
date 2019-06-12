@@ -18,22 +18,29 @@
     display: block;
     width: 375px;
     overflow: scroll;
-
+    box-shadow: -2px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .info_place h1 {
     font-weight: bold;
     border-top-left-radius: 20px;
     margin: -15px;
-    padding: 27px;
+    padding: 20px;
     margin-bottom: 15px;
     font-size: 24px;
     text-align: center;
     font-family: roboto;
+    padding-top: 30px;
 }
 
-#pictureparc {
+#picturesinfo {
   width: 100%;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3) inset;
+ }
+
+#close-info {
+  margin-top: -10px;
+  color: black;
 }
 
 .icons {
@@ -98,6 +105,15 @@
     font-size: 24px;
     text-align: center;
     font-family: roboto;
+}
+
+// .img-fluid {
+//   width: 100%;
+//   box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3) inset;
+// }
+
+#info-pratique {
+  padding-top: 15px;
 }
 
 #button-plus {

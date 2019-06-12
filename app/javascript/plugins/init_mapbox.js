@@ -73,6 +73,8 @@ const initMapbox = () => { 
 
     if (window.location.pathname == "/places" || window.location.pathname == "/places/") {
       map.on("load", clickOnURLActivities);
+    } else if (window.location.pathname == "" || window.location.pathname == "/") {
+      sessionStorage.setItem('activitiesChoices', []);
     }
     // const geocodou = new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: map });
     // document.getElementById('geocoder').appendChild(geocodou.onAdd(map));
