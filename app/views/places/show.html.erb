@@ -44,11 +44,11 @@
       <p><span class="droite">
         <% if current_user.places.where(id: @place.id).any? %>
          <%= link_to FavoritesPlace.find_by(user: current_user, place: @place), method: :delete do %>
-          <i class="fas fa-heart icons_heart" id="heart_color"></i>
+          <i class="fas fa-heart icons_heart" id="heart_color" data-toggle="tooltip" data-placement="right" title="Ajouter aux favoris!"></i>
           <% end %>
         <% else %>
 
-            <i class="far fa-heart icons_heart" id=""></i>
+            <i class="far fa-heart icons_heart" id="" data-toggle="tooltip" data-placement="right" title="Enlever des favoris!"></i>
 
         <% end %>
       </span></p>
