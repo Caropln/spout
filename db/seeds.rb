@@ -24,7 +24,7 @@ caroline = User.create!(
   password:"carolinecaroline"
 )
 
-caroline.remote_avatar_url = "https://ressources.phildar.fr/produits/047837/2298/medium/047837_2298_S1.jpg"
+caroline.remote_avatar_url = "https://res.cloudinary.com/deqh1paih/image/upload/v1560420713/caro_tdtcs3.jpg"
 caroline.save
 
 teddy = User.create!(
@@ -161,7 +161,7 @@ Activity.create!(name: 'Parc')
   place = Place.create!(name: 'Parc du 26e Centenaire', address: 'Avenue de Corinthe, 13010 - MARSEILLE', accessibility: 'Proximité arrêt de bus Parc du 26eme Centenaire', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560172690/parc-26centenaire_bnub2h.jpg', latitude: '43.2805941', longitude: '5.3927428')
   place.activities << activity4
 
-  place = Place.create!(name: 'Parc Borély', address: 'Avenue Borély, 13008 - MARSEILLE', accessibility: 'Proche entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00 - 20:45', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560175921/Parc-Borely_mtnfi4.jpg', latitude: '43.261652', longitude: '5.3800873')
+  place = Place.create!(name: 'Parc Borély', address: 'Avenue Borély, 13008 - MARSEILLE', accessibility: 'Proche entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00 - 20:45', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560175921/Parc-Borely_mtnfi4.jpg', latitude: '43.2668148', longitude: '5.3738101')
   place.activities << activity4
 
   place = Place.create!(name: 'Jardin de la Magalone', address: '245 Boulevard Michelet, 13009 - MARSEILLE', accessibility: 'Proximité arrêt de bus le Corbusier', schedules: 'Ouvert tous les jours : 08:00 - 20:00', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560175950/jardinMagalone_jsqcxd.jpg', latitude: '43.2616023', longitude: '5.3961861')
@@ -177,10 +177,15 @@ Activity.create!(name: 'Volleyball')
   place.activities << activity5
   teddy.reviews.create!(content: "Très joli site, propre et agréable, je le recommande vivement!!!", rating: 5, place: place)
   aymeric.reviews.create!(content: "Parfait pour s'amuser entre amis.", rating: 5, place: place)
+  martin.reviews.create!(content: "Sympa, j'aime bien la vue pendant un match entre potes.", rating: 4, place: place)
+
 
   place = Place.create!(name: 'Beach Volley-Ball - Plage des Prophètes', address: 'Corniche, Président John Fitzgerald Kennedy, 13007 - Marseille', accessibility: 'Proximité arrêt de bus - Le Prophete', schedules: 'Ouvert 24/24', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560157967/BeachvolleyProphetes_fixsnp.png', latitude: '43.2730287', longitude: '5.3624088')
   place.activities << activity5
   teddy.reviews.create!(content: "Sympa, j'aime bien la vue pendant un match entre potes.", rating: 4, place: place)
+  sophie.reviews.create!(content: "Très joli site, propre et agréable, je le recommande vivement!!!", rating: 5, place: place)
+  aymeric.reviews.create!(content: "Parfait pour s'amuser entre amis.", rating: 5, place: place)
+
 
 activity6 = Activity.create!(name: 'Skatepark')
 
@@ -202,7 +207,7 @@ Activity.create!(name: 'Skatepark')
 activity7 = Activity.create!(name: 'Fitness')
 
 Activity.create!(name: 'Fitness')
-  place = Place.create!(name: 'Street workout park - Parc borely', address: 'Avenue du Prado, 13008 - MARSEILLE', accessibility: 'Situé proche de l entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00-20:45', pictures: '', latitude: '43.261652', longitude: '5.3800873')
+  place = Place.create!(name: 'Street workout park - Parc borely', address: 'Avenue du Prado, 13008 - MARSEILLE', accessibility: 'Situé proche de l entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00-20:45', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560421033/download_zljyma.png', latitude: '43.2668148', longitude: '5.3738101')
   place.activities << activity7
   alexandre.reviews.create!(content: "Parfais pour se remettre en forme seul ou entre amis.", rating: 4, place: place)
   sophie.reviews.create!(content: "Agréablement surprise, j'y retournerai.", rating: 5, place: place)
