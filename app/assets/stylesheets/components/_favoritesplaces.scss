@@ -30,6 +30,7 @@ text-decoration-color: #A200FF;
 
   .text-decoration-none {
     text-decoration: none;
+    cursor: pointer;
   }
 .info_place_favorite > p  {
   overflow: hidden;
@@ -117,6 +118,7 @@ text-decoration-color: #A200FF;
 .icons_favorite {
   padding-right: 15px;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .icons_heart {
@@ -126,6 +128,8 @@ text-decoration-color: #A200FF;
   text-decoration: none;
   text-align: right;
   text-decoration: none;
+  color: #5270fc;
+
 }
 
 #heart_color {
@@ -133,11 +137,11 @@ text-decoration-color: #A200FF;
   text-decoration: none;
 }
 
-#heart_color:hover {
-  color: #efefef ;
-  text-decoration: none;
-  // border: 1px solid #5270fc;
-}
+// #heart_color:hover {
+//   color: #efefef ;
+//   text-decoration: none;
+//   // border: 1px solid #5270fc;
+// }
 
 
 .fb_favorite p {
