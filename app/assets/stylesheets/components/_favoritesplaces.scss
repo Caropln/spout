@@ -16,8 +16,8 @@
 
   }
 .main {
-  text-decoration: solid teal underline;
-  text-align: center;
+text-decoration: solid teal underline;
+text-align: center;
 font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: bold;
@@ -41,8 +41,8 @@ text-decoration-color: #A200FF;
 }
 
 
-    .info_place_favorite h1 {
-      color: white;
+    .info_place_favorite h2 {
+    color: white;
     font-weight: bold;
     margin: -15px;
     padding: 27px;
@@ -52,6 +52,7 @@ text-decoration-color: #A200FF;
     font-family: 'Montserrat', sans-serif;
      border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    min-height: 100px;
 
 
 }
