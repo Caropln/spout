@@ -5,7 +5,7 @@
 
   <div class="card-product-infos stars">
     <h1 class="review_title"> <%= review.user.username  %> </h1>
-     <h6><%= review.created_at %></h6>
+     <h6><%= review.created_at.strftime("%d/%m/%Y") %></h6>
      <h2><%= "⭐" * (review.rating || 0)  %></h2>
     <p><%= review.content %></p>
 
