@@ -207,7 +207,7 @@ Activity.create!(name: 'Skatepark')
 activity7 = Activity.create!(name: 'Fitness')
 
 Activity.create!(name: 'Fitness')
-  place = Place.create!(name: 'Street workout park - Parc borely', address: 'Avenue du Prado, 13008 - MARSEILLE', accessibility: 'Situé proche de l entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00-20:45', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560421033/download_zljyma.png', latitude: '43.2668148', longitude: '5.3738101')
+  place = Place.create!(name: 'Street workout park - Parc borely', address: 'Avenue du Prado, 13008 - MARSEILLE', accessibility: 'Situé proche de l entrée Prado 2', schedules: 'Ouvert tous les jours : 06:00-20:45', pictures: 'https://res.cloudinary.com/deqh1paih/image/upload/v1560421033/download_zljyma.png', latitude: '43.2604435', longitude: '5.3826828')
   place.activities << activity7
   alexandre.reviews.create!(content: "Parfais pour se remettre en forme seul ou entre amis.", rating: 4, place: place)
   sophie.reviews.create!(content: "Agréablement surprise, j'y retournerai.", rating: 5, place: place)
