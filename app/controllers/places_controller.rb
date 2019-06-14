@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+    skip_before_action :authenticate_user!, only: [:show]
+
   def index
     if params[:address]
       @places = Place.near(params[:address], params[:radius] || 2).where.not(latitude: nil, longitude: nil)
