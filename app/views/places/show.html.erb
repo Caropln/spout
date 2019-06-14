@@ -1,5 +1,4 @@
 <% content_for :meta_image, cl_image_path(@place.pictures) %>
-
 <div class="container_show">
   <div
     id="map"
@@ -10,13 +9,13 @@
   ></div>
   <div class="info_place">
     <div>
-    <%= link_to places_path, class: "close", id: "close-info" do %>
-     <span aria-hidden="true">&times; </span>
-     <% end %>
-   </div>
+      <%= link_to places_path, class: "close", id: "close-info" do %>
+      <span aria-hidden="true">&times; </span>
+      <% end %>
+    </div>
     <h1 class="title-place header-activity__<%= @activity %>">
-     <%= @place.name %>
-     </h1>
+    <%= @place.name %>
+    </h1>
     <p style="font-weight: bold"> Photos </p>
     <%= cl_image_tag @place.pictures, class: "img-fluid", id: "picturesinfo" %>
     <p style="font-weight: bold" id="info-pratique"> Informations pratiques </p>
@@ -30,77 +29,63 @@
         Voir plus
         </button>
       </div>
-
       <div class="card-reviews-container">
         <% @place.reviews.order(created_at: :desc).limit(4).each do |review| %>
-          <%= render 'reviews/show', review: review %>
+        <%= render 'reviews/show', review: review %>
         <% end %>
-
       </div>
     </div>
-<div>
-    <%= simple_form_for [@place, @favorite_place] do |f| %>
-        <%= f.submit "add a review", class: "btn btn-primary new-favorite" %>
+    <div>
+      <%= simple_form_for [@place, @favorite_place] do |f| %>
+      <%= f.submit "add a review", class: "btn btn-primary new-favorite" %>
       <% end %>
       <div>
-      <p><span class="droite">
-        <% if current_user.places.where(id: @place.id).any? %>
-         <%= link_to FavoritesPlace.find_by(user: current_user, place: @place), method: :delete, class: "text-decoration-none" do %>
+        <p><span class="droite">
+          <% if current_user.places.where(id: @place.id).any? %>
+          <%= link_to FavoritesPlace.find_by(user: current_user, place: @place), method: :delete, class: "text-decoration-none" do %>
           <i class="fas fa-heart icons_heart" id="heart_color" data-toggle="tooltip" data-placement="right" title="Enlever des favoris"></i>
           <% end %>
-        <% else %>
+          <% else %>
+          <i class="far fa-heart icons_heart text-decoration-none" id="" data-toggle="tooltip" data-placement="right" title="Ajouter aux favoris"></i>
+          <% end %>
+        </span></p>
 
-            <i class="far fa-heart icons_heart text-decoration-none" id="" data-toggle="tooltip" data-placement="right" title="Ajouter aux favoris"></i>
-
-        <% end %>
-      </span></p>
-
-      <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-  <span><strong>Yay!</strong> 🎉 Votre spot a bien été ajouté !</span>
-  <a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
-</div>
-    <div class="fb-share-button"
-    data-href="<%= place_url(@place, activity: @activity) %>"
-    data-layout="button_count">
+        <div class="fb-share-button"
+          data-href="<%= place_url(@place, activity: @activity) %>"
+          data-layout="button_count">
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-</div>
-</div>
-
-<div class="modal fade" id="modalReviews" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" data-dismiss="modal" class="close">
+  <div class="modal fade" id="modalReviews" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" data-dismiss="modal" class="close">
           <span aria-hidden="true">&times;</span>
-        </button>
-        <div id="reviews" >
-          <%= render 'reviews/form', place: @place, review: @review %>
-
-          <div class="reviews-container" id="essais">
-            <% if @place.reviews.blank? %>
+          </button>
+          <div id="reviews" >
+            <%= render 'reviews/form', place: @place, review: @review %>
+            <div class="reviews-container" id="essais">
+              <% if @place.reviews.blank? %>
               <p>Soyez le premier à laisser un avis sur <%= @place.name %></p>
-            <% else %>
+              <% else %>
               <% @place.reviews.order(created_at: :desc).each do |review| %>
-               <%= render 'reviews/show', review: review %>
+              <%= render 'reviews/show', review: review %>
               <% end %>
-            <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<script>
+  <script>
   const heart = document.querySelector(".droite");
   const container = document.querySelector(".container_show");
-
   const addFavorite = () =>  {
-    const submit = document.querySelector(".new-favorite");
-    submit.click();
+  const submit = document.querySelector(".new-favorite");
+  submit.click();
   }
   heart.addEventListener("click", addFavorite);
-</script>
+  </script>
