@@ -41,7 +41,7 @@
       <% end %>
       <div>
         <p><span class="droite">
-          <% if current_user.places.where(id: @place.id).any? %>
+          <% if current_user && current_user.places.where(id: @place.id).any? %>
           <%= link_to FavoritesPlace.find_by(user: current_user, place: @place), method: :delete, class: "text-decoration-none" do %>
           <i class="fas fa-heart icons_heart" id="heart_color" data-toggle="tooltip" data-placement="right" title="Enlever des favoris"></i>
           <% end %>
@@ -65,7 +65,9 @@
           <span aria-hidden="true">&times;</span>
           </button>
           <div id="reviews" >
-            <%= render 'reviews/form', place: @place, review: @review %>
+            <% if current_user %>
+              <%= render 'reviews/form', place: @place, review: @review %>
+            <% end %>
             <div class="reviews-container" id="essais">
               <% if @place.reviews.blank? %>
               <p>Soyez le premier à laisser un avis sur <%= @place.name %></p>
